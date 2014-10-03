@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <servlet>
+        <servlet-name>MortgageCalculator</servlet-name>
+        <servlet-class>org.medwards11.MortgageCalculator</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>OneLiner</servlet-name>
+        <servlet-class>org.medwards11.OneLiner</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>MortgageCalculator</servlet-name>
+        <url-pattern>/MortgageCalculator</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>OneLiner</servlet-name>
+        <url-pattern>/OneLiner</url-pattern>
+    </servlet-mapping>
+
+</web-app>

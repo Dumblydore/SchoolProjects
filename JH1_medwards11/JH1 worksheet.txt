@@ -1,0 +1,17 @@
+JH1 worksheet
+
+***************** Class Participation    *****************
+Your Class Participation Entry for JH1:
+Discussion board containing your entry:Questions/Answers
+Date of your Entry: 8:30 pm 09/08/2014
+Subject Line of your entry: Server
+
+
+***************** First JSP Page    *****************
+
+Any comments regarding the First JSP Page problem:
+
+***************** First Html Page    *****************
+
+Any comments regarding the First Html Page problem:
+I couldn't get the image to load on internet explorer. But it works fine on chrome

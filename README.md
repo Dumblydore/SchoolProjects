@@ -1,4 +1,0 @@
-SchoolProjects
-==============
-
-Just school stuff

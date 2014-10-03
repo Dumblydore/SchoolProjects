@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JH1</title>
+    <style>
+        .main {
+            position: relative;
+            max-width: 600px;
+            margin: 0 auto;
+            <!--background-color: yellow;-->
+        }
+
+        .image{
+            overflow: auto;
+            content:url(http://lorempixel.com/g/400/200/);
+        }
+
+        #textStyle{
+            width: 100px;
+        }
+
+        .textArea {
+          width: 400px;
+        }
+
+        .radioButtonContainer {
+
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <!--<table></table>-->
+    <form action="doit" id="form">
+        <input type="text" name="inputText">
+        <input type="checkbox" name="chkbox">Checkbox
+        <div class="image"></div>
+        <div class="radioButtonContainer">
+            <input type="radio" name="group1" value="value1">Value 1
+            <input type="radio" name="group1" value="value2">Value 2
+            <input type="radio" name="group1" value="value3">Value 3
+        </div>
+        <textarea rows="4" cols="50" name="txtArea" form="form" class="textArea"></textarea>
+        <br>
+        <input type="button" name="submitBtn" value="Submit" class="textArea">
+    </form>
+</div>
+</body>
+</html>

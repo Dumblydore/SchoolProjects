@@ -1,0 +1,18 @@
+JH2 worksheet
+
+***************** Class Participation    *****************
+didn't get a chance to :/
+
+***************** Mortgage Calculator    *****************
+
+JING URL demoing your Program.
+Any optional comments regarding this problem.
+
+I had issues with pushing raw html so i just used JSON + Jquery/ajax.
+I have issues with netbeans for some reason so i have to use intellij. It's a maven project so it shouldn't be a problem with importing it to netbeans.
+
+***************** One-Liner Program    *****************
+
+JING URL demoing your Program.
+Any optional comments regarding this problem.
+I also used json + jquery/ajax for this.
