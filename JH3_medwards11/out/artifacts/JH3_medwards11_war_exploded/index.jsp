@@ -15,7 +15,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     ArrayList lines = new ArrayList();
-    String fileLocation = application.getRealPath("/") + "WEB-INF/OneLiners.txt";
+    String fileLocation = application.getRealPath("/WEB-INF/OneLiners.txt");
     try {
         BufferedReader reader = new BufferedReader(new FileReader(new File(fileLocation)));
         String line;

@@ -5,17 +5,11 @@
 <%@ page import="java.io.IOException" %>
 <%@ page import="java.net.URISyntaxException" %>
 <%@ page import="java.util.Random" %>
-<%--
-  Created by IntelliJ IDEA.
-  User: Maurice
-  Date: 10/2/2014
-  Time: 7:38 PM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <%
     ArrayList lines = new ArrayList();
-    String fileLocation = application.getRealPath("/") + "WEB-INF/OneLiners.txt";
+    String fileLocation = application.getRealPath("/WEB-INF/OneLiners.txt");
     try {
         BufferedReader reader = new BufferedReader(new FileReader(new File(fileLocation)));
         String line;
