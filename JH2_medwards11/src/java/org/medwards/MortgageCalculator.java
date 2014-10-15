@@ -1,4 +1,4 @@
-package org.medwards11;
+package org.medwards;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

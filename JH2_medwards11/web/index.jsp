@@ -12,7 +12,7 @@
               {
                 $.ajax ({
                             type: "GET",
-                            url: "http://localhost:8080/OneLiner"
+                            url: "http://localhost:8080/JH2_medwards11/OneLiner"
                         }
                     ).then(function(data)
                         {
@@ -22,7 +22,7 @@
 
                      $.ajax({
                          type: "GET",
-                         url: "http://localhost:8080/MortgageCalculator",
+                         url: "http://localhost:8080/JH2_medwards11/MortgageCalculator",
                          datatype: 'json',
                          data: {
                              'principal': $('#principal').val(),
