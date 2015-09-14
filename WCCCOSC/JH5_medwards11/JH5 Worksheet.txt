@@ -1,0 +1,38 @@
+JH5 worksheet
+
+***************** Class Participation    *****************
+None
+
+***************** Creating a JDBC program to create a table called states    *********
+
+JING URL demoing your Program.
+http://screencast.com/t/meKUpWIQszM
+Any optional comments regarding this problem.
+____________________________________
+
+
+
+***************** Creating a JDBC program to create a table called cities    *********
+
+JING URL demoing your Program.
+http://screencast.com/t/meKUpWIQszM
+Any optional comments regarding this problem.
+____________________________________
+
+
+
+***************** Select with a Join   *********
+
+JING URL demoing your Program.
+http://screencast.com/t/meKUpWIQszM
+Any optional comments regarding this problem.
+____________________________________
+
+
+
+***************** Delete and Update    *********
+
+JING URL demoing your Program.
+http://screencast.com/t/meKUpWIQszM
+Any optional comments regarding this problem.
+____________________________________

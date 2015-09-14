@@ -1,0 +1,261 @@
+body{
+    overflow:hidden;
+}
+#main{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    -webkit-animation-name: fadeIn;
+    -webkit-animation-duration: 500ms;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-timing-function: ease-in;
+    -webkit-animation-delay:250ms;
+    animation-name: fadeIn;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+    animation-delay:250ms;
+
+}
+
+#main #bg{
+    /* Set rules to fill background */
+    min-height: 100%;
+    min-width: 1024px;
+    /* Set up proportionate scaling */
+    width: 100%;
+    height: auto;
+
+    /* Set up positioning */
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#search {
+    opacity: 0;
+    -webkit-animation-name: fadeIn;
+    -webkit-animation-duration: 300ms;
+    -webkit-animation-delay: 700ms;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-timing-function: linear;
+    animation-name: fadeIn;
+    animation-duration: 300ms;
+    animation-delay: 700ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 24px;
+    margin: 0 auto;
+    position: relative;
+    display: table;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+/*Name still pending*/
+#title{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 36px;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+#politicianInfo {
+    color: white;
+    top:0;
+    left:-250px;
+    width: 250px;
+    height: 100%;
+    margin-right: auto;
+    background-color: #0c0c0c;
+    position: absolute;
+    text-align: center;
+}
+
+#politicianInfo button {
+    width: 25px;
+    height: 25px;
+    color: #4e4e4e;
+    background: #0c0c0c;
+    position: absolute;
+    top: 0;
+    left: 225px;
+    text-decoration: none;
+    text-align: center;
+    border: 0px none;
+    outline: 0px none;
+}
+#politicianInfo button:hover {
+    background: #bd0000;
+
+}
+#politicianName {
+    width: 250px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 24px;
+    text-align: center;
+}
+
+#politicianInfo h1 {
+    font-weight: normal;
+}
+
+#politicianInfo p {
+    font-size: 12pt;
+    font-weight: lighter;
+}
+
+
+
+#politicianInfo td {
+    text-align: left;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12pt;
+    font-weight: lighter;
+    padding: 3px 7px 2px 7px;
+}
+
+#politicianInfo table tr:hover {
+    background: #4e4e4e;
+    border: 1px solid #4e4e4e;
+}
+
+#politicianInfo table td:hover {
+    background: #4e4e4e;
+    border: 1px solid #4e4e4e;
+}
+
+
+
+#politicianInfo tr.alt td{
+    background: #4e4e4e;
+}
+
+
+#politicianPhoto {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    border-radius: 50%;
+    overflow:hidden;
+}
+
+
+
+/*For Styling Different dataset markers in Typeahead*/
+#search .state{
+    margin: 0 20px 5px 20px;
+    padding: 3px 0;
+    border-bottom: 1px solid #ccc;
+}
+/*Table css*/
+
+/*Typeahead Styling*/
+.tt-input, /* UPDATE: newer versions use tt-input instead of tt-query */
+.tt-hint {
+    width: 596px;
+    height: 30px;
+    padding: 8px 12px;
+    font-size: 24px;
+    line-height: 30px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+}
+
+/* unvisited link */
+a:link {
+    color: white;
+    text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+/* selected link */
+a:active {
+    color: white;
+    text-decoration: none;
+}
+
+.tt-query { /* UPDATE: newer versions use tt-input instead of tt-query */
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.tt-hint {
+    color: #999
+}
+
+.tt-dropdown-menu {
+    width: 622px;
+    margin-top: 12px;
+    padding: 8px 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    max-height: 200px;
+    overflow-y: auto;
+    opacity: 0;
+    -webkit-animation-name: fadeIn;
+    -webkit-animation-duration: 300ms;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-timing-function: linear;
+    animation-name: fadeIn;
+    animation-duration: 300ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+.tt-suggestion {
+    padding: 3px 20px;
+    font-size: 18px;
+    line-height: 24px;
+}
+.tt-suggestion.tt-cursor {
+    -webkit-animation-name: fadeIn;
+    -webkit-animation-duration: 100ms;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-timing-function: linear;
+    animation-name: fadeOut;
+    animation-duration: 100ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    color: #fff;
+    background-color: #0097cf;
+
+}
+
+.tt-suggestion p {
+    margin: 0;
+}
+
+#disclaimer {
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    z-index: 1;
+    outline-color: black;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #ffffff;
+}
+

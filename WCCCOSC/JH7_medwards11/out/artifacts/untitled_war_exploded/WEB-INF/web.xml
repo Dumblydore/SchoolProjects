@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <servlet>
+        <servlet-name>State</servlet-name>
+        <servlet-class>medwards11.search.State</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Country</servlet-name>
+        <servlet-class>medwards11.search.Country</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Politician</servlet-name>
+        <servlet-class>medwards11.search.Politician</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Login</servlet-name>
+        <servlet-class>medwards11.user.Login</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Add</servlet-name>
+        <servlet-class>medwards11.admin.Add</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>Logout</servlet-name>
+        <servlet-class>medwards11.user.Logout</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>New</servlet-name>
+        <servlet-class>medwards11.news.New</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Get</servlet-name>
+        <servlet-class>medwards11.news.Get</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Stance</servlet-name>
+        <servlet-class>medwards11.search.Stance</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>State</servlet-name>
+        <url-pattern>/search/state</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>Politician</servlet-name>
+        <url-pattern>/search/politician</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>Country</servlet-name>
+        <url-pattern>/search/country</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>Stance</servlet-name>
+        <url-pattern>/search/stance</url-pattern>
+    </servlet-mapping>
+
+
+</web-app>

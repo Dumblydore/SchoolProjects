@@ -1,0 +1,27 @@
+*.class
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+<<<<<<< HEAD
+/JH3_medwards11/nbproject/private/
+/JH3_medwards11/build/
+/JH2_medwards11/nbproject/private/
+/JH2_medwards11/build/
+/JH2_medwards11/dist/
+=======
+/JH3_medwards11/nbproject/private/
+>>>>>>> 0c579830917eb0b73c34b99658e2446952f90448
+/JH4_medwards11/dist/
+/JH3_medwards11/dist/
+/JH5_medwards11/nbproject/private/
+/JH5_medwards11/build/
+/JH6_medwards11/nbproject/private/
+/JH6_medwards11/build/

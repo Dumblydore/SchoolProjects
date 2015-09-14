@@ -1,0 +1,12 @@
+JH7 worksheet
+
+***************** Class Participation    *****************
+No Class participation
+
+***************** Your Final Project  *********
+
+JING URL demoing your Program.
+Any optional comments regarding this problem.
+http://www.screencast.com/t/w3eGiauFcWswJH7
+Netbeans wasn't working, so I had to use IntelliJ. I'll try to email you a netbeans project asap
+
