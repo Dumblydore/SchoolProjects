@@ -1,0 +1,11 @@
+{
+  "name": "assignment-1",
+  "description": "Home Page for school",
+  "version": "0.0.0",
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.5.4"
+  },
+  "devDependencies": {
+    "closure-compiler" : "http://dl.google.com/closure-compiler/compiler-latest.zip"
+  }
+}
