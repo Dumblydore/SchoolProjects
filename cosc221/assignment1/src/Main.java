@@ -3,7 +3,7 @@
 *   COSC 221
 *   Fall Semester
 *
-*
+*  This program converts an 8-bit binary number into a decimal and a decimal between 0-255 to a 8-bit binary number.
 *
 */
 import java.util.Scanner;
