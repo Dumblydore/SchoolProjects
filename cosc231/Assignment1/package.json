@@ -1,5 +1,5 @@
 {
-  "name": "assignment-1",
+  "name": "assignment1",
   "version": "0.0.0",
   "dependencies": {},
   "devDependencies": {
@@ -46,6 +46,6 @@
     "npm": ">=1.3.8"
   },
   "scripts": {
-    "pre-publish": "gulp && mkdir -p ../assignment-1_dist && cp -r _dist/* ../assignment-1_dist/"
+    "pre-publish": "gulp && mkdir -p ../assignment1_dist && cp -r _dist/* ../assignment1_dist/"
   }
 }

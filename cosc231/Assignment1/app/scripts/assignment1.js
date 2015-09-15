@@ -1,7 +1,7 @@
 'use strict';
 // var lib = require('./components/components');
 (function(scope){
-    var polymer = scope.Polymer('assignment-1', {
+    var polymer = scope.Polymer('assignment1', {
       /**
        * The `noevent` event is not actually fired from here,
        * we document it as an example of documenting events.

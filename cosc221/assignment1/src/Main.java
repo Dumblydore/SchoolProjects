@@ -1,5 +1,12 @@
+/*
+*   Maurice Edwards
+*   COSC 221
+*   Fall Semester
+*
+*
+*
+*/
 import java.util.Scanner;
-
 public class Main {
 
     private static String menu = "Options\n" +
@@ -18,10 +25,22 @@ public class Main {
                     System.exit(0);
                     break;
                 case 1:
-                    byteToDec(keyboard.next(), 0);
+                    System.out.print("Enter number between 0-255> ");
+                    int number = keyboard.nextInt();
+                    //checking that input is within the bonuds of 0-255
+                    if(number < 0 || number >  255) {
+                        System.out.println(number + " is outside the bounds of a single byte, please enter numbers between 0-255");
+                    }
+                    decToByte(number);
                     break;
                 case 2:
-                    decToByte(keyboard.nextInt());
+                    System.out.print("Enter byte> ");
+                    String byteString = keyboard.next();
+                    if(byteString.contains(" ") || byteString.length() > 8) {
+                        System.out.println(byteString + " is not a valid 8 bit binary number, try again.");
+                        return;
+                    }
+                    byteToDec(byteString, 0);
                     break;
                 default:
                     System.out.println("Invalid command, try again.");
@@ -57,3 +76,54 @@ public class Main {
 }
 
 
+/*
+Options
+1 -> Convert decimal into byte
+2 -> Convert byte into decimal
+0 -> quit
+>1
+Enter number between 0-255> 255
+11111111
+Options
+1 -> Convert decimal into byte
+2 -> Convert byte into decimal
+0 -> quit
+>2
+Enter byte> 1011
+11.0
+Options
+1 -> Convert decimal into byte
+2 -> Convert byte into decimal
+0 -> quit
+>1
+Enter number between 0-255> 300
+300 is outside the bounds of a single byte, please enter numbers between 0-255
+100101100
+Options
+1 -> Convert decimal into byte
+2 -> Convert byte into decimal
+0 -> quit
+>1
+Enter number between 0-255> -5
+-5 is outside the bounds of a single byte, please enter numbers between 0-255
+-5
+Options
+1 -> Convert decimal into byte
+2 -> Convert byte into decimal
+0 -> quit
+>2
+Enter byte> 11 11
+3.0
+Options
+1 -> Convert decimal into byte
+2 -> Convert byte into decimal
+0 -> quit
+>Invalid command, try again.
+
+Options
+1 -> Convert decimal into byte
+2 -> Convert byte into decimal
+0 -> quit
+>0
+Goodbye!
+*/

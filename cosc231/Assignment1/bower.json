@@ -1,6 +1,6 @@
 {
-  "name": "assignment-1",
-  "description": "Home Page for school",
+  "name": "assignment1",
+  "description": "Home page",
   "version": "0.0.0",
   "dependencies": {
     "polymer": "Polymer/polymer#~0.5.4"

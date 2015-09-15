@@ -74,7 +74,7 @@ var sizeOf = function(stream, title){
   })
 
   gulp.task('p-scripts:package:now', function(){
-    var jsBundles = [distDir + '/scripts/assignment-1.min.js'];
+    var jsBundles = [distDir + '/scripts/assignment1.min.js'];
     glob(distDir + '/scripts/**/*-b.js', function(er, filesArray){
       for(var i=0;i<filesArray.length;i++){
         jsBundles.push(filesArray[i]);
@@ -96,7 +96,7 @@ var sizeOf = function(stream, title){
   });
 
   var scriptsBrowserify = function(env){
-    var jsBundles = ['app/scripts/assignment-1.js'];
+    var jsBundles = ['app/scripts/assignment1.js'];
     glob('app/scripts/**/*-b.js', function(er, filesArray){
       for(var i=0;i<filesArray.length;i++){
         jsBundles.push(filesArray[i]);
@@ -469,7 +469,7 @@ var sizeOf = function(stream, title){
   });
 
   gulp.task('vulcanize:inline:now',function(){
-    return gulp.src(distDir + '/assignment-1.html', {base: distDir + '/'})
+    return gulp.src(distDir + '/assignment1.html', {base: distDir + '/'})
       .pipe($.vulcanize({
         dest: destDir + vulcanizedDirInline + '/',
         inline: true
@@ -506,7 +506,7 @@ var sizeOf = function(stream, title){
   });
 
   var vulcanizeWithExternalScriptsAndStyles = function(vulcanizeOptions){
-    return gulp.src(tmpDir + '/assignment-1.html')
+    return gulp.src(tmpDir + '/assignment1.html')
       // add needed css and js
       .pipe($.useref.assets({searchPath: tmpDir}))
       .pipe($.tap(function(file,t){
@@ -518,7 +518,7 @@ var sizeOf = function(stream, title){
       }))
       .pipe($.useref.restore())
       .pipe($.tap(function(file,t){
-        return gulp.src(distDir + '/assignment-1.html', {base: distDir + '/'})
+        return gulp.src(distDir + '/assignment1.html', {base: distDir + '/'})
           .pipe(gulp.dest(vulcanizeOptions.dest))
           .pipe($.vulcanize(vulcanizeOptions));
       }));
