@@ -17,21 +17,21 @@ var ColorTable = React.createClass({
                     </th>
                     <tr>
                         <td>red</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td style={{'background-color': '#f44336'}}></td>
+                        <td style={{'background-color': '#ffeb3b'}}></td>
+                        <td style={{'background-color': '#673AB7'}}></td>
                     </tr>
                     <tr>
                         <td>green</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td style={{'background-color': '#ffeb3b'}}></td>
+                        <td style={{'background-color': '#4caf50'}}></td>
+                        <td style={{'background-color': '#009688'}}></td>
                     </tr>
                     <tr>
                         <td>blue</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td style={{'background-color': '#673AB7'}}></td>
+                        <td style={{'background-color': '#009688'}}></td>
+                        <td style={{'background-color': '#2196f3'}}></td>
                     </tr>
                 </table>
             </div>

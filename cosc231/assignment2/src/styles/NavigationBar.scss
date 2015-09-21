@@ -2,6 +2,8 @@
 
 .NavigationBar {
     //border: 1px dashed #f00;
+    background: #212121;
+    color: white;
     border-right: 1px solid $divider-color;
     position: absolute;
     width: 300px;
@@ -53,13 +55,5 @@
 
 
     }
-    .ColorTable {
-        position: absolute;
-        bottom: 0;
-        height: 300px;
-        td {
-            position: inherit;
-            height: 25%;
-        }
-    }
+
 }

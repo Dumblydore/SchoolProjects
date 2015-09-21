@@ -3,53 +3,43 @@
 @import 'palette';
 
 html, body {
-  background: #222222;
-}
-
-table, th, td, {
-    border: 1px solid black;
-    border-collapse: collapse;
-    text-align: center;
-}
-
-th, td {
-    padding: 5px;
+    background: #FAFAFA;
+    //background: #222222;
 }
 
 /* main */
 
 .main {
-  width: 100%;
-  height: 100%;
-  background: #222222;
-  color: #fff;
+    width: 100%;
+    height: 100%;
+    color: $primary-text-color;
 }
 
 .main img {
-  width: 103px;
-  height: 89px;
-  margin-bottom: 10px;
-  text-align: center;
+    width: 103px;
+    height: 89px;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 /* transitions */
 
 .fade-enter {
-  opacity: 0.01;
-  transition: opacity .5s ease-in;
+    opacity: 0.01;
+    transition: opacity .5s ease-in;
 }
 
 .fade-enter.fade-enter-active {
-  opacity: 1;
+    opacity: 1;
 }
 
 .fade-leave {
-  opacity: 1;
-  transition: opacity .5s ease-in;
+    opacity: 1;
+    transition: opacity .5s ease-in;
 }
 
 .fade-leave.fade-leave-active {
-  opacity: 0.01;
+    opacity: 0.01;
 }
 
 .listItem {
@@ -69,5 +59,35 @@ th, td {
 
     &:visited {
         color: $primary-text-color;
+    }
+}
+
+.headers {
+    position: absolute;
+    right: 0;
+
+    * {
+        display: inline-block;
+    }
+}
+
+.hobbies-list {
+    position: absolute;
+    left: 30%;
+    h1, ol, ul {
+        color: $primary-text-color;
+    }
+
+}
+
+.ColorTable {
+    position: absolute;
+    bottom: 0;
+    height: 300px;
+    left: 300px;
+    width: 70%;
+    td {
+        position: inherit;
+        height: 25%;
     }
 }

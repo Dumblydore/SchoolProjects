@@ -8,8 +8,8 @@ require('styles/NavigationBar.scss');
 
 let uiOptions = [
     {
-        text: 'Assignment 2',
-        url: '/assignment2'
+        text: 'Assignment 1',
+        url: '/assignment1'
     }
 ];
 
@@ -40,7 +40,6 @@ var NavigationBar = React.createClass({
                         })
                     }
                 </div>
-                <ColorTable></ColorTable>
             </div>
         );
     }
