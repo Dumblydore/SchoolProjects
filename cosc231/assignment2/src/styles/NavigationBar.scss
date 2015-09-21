@@ -1,0 +1,65 @@
+@import 'palette';
+
+.NavigationBar {
+    //border: 1px dashed #f00;
+    border-right: 1px solid $divider-color;
+    position: absolute;
+    width: 300px;
+    height: 100%;
+
+    .header, .links {
+        //border: 1px dashed blue;
+        display: block;
+    }
+
+    .header {
+        font-family: 'Roboto', sans-serif;
+        width: 100%;
+        line-height: 30px;
+
+        .head-shot {
+            margin: 25px 75px 25px 75px;
+            width: 150px;
+            height: 150px;
+            background-color: $background-color;
+            border-radius: 75px;
+        }
+
+        h1, p {
+            width: 100%;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+        }
+
+        a {
+            line-height: 30px;
+            color: white;
+            text-decoration: none;
+
+            &.visited {
+                color: $primary-text-color;
+            }
+        }
+    }
+    .links {
+        label {
+            font-family: 'Roboto', sans-serif;
+            font-size: medium;
+            position: absolute;
+            width: 100%;
+            border-bottom: 1px solid $divider-color;
+        }
+
+
+    }
+    .ColorTable {
+        position: absolute;
+        bottom: 0;
+        height: 300px;
+        td {
+            position: inherit;
+            height: 25%;
+        }
+    }
+}

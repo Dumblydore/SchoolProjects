@@ -25,7 +25,7 @@ public class Assignment2 {
                     System.exit(0);
                     break;
                 case 1:
-                    System.out.print("Enter an unsigned number between (-128-127)> ");
+                    System.out.print("Enter an signed integer between (-128-127)> ");
                     int number = keyboard.nextInt();
                     //checking that input is within the bonuds of -128-127
                     if(number < -128 || number >  127) {
