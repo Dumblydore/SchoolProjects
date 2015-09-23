@@ -2,7 +2,6 @@
 
 const React = require('react/addons');
 const {Link, RouteHandler} = require('react-router');
-const ColorTable = require('./ColorTable');
 
 require('styles/NavigationBar.scss');
 
@@ -23,8 +22,10 @@ var NavigationBar = React.createClass({
       <div className="NavigationBar">
         <div className="header">
           <div className="head-shot-container">
-            <img className="head-shot"
-                 src="https://avatars3.githubusercontent.com/u/5824872?v=3&s=460"></img>
+            <Link to="/">
+              <img className="head-shot"
+                   src="https://avatars3.githubusercontent.com/u/5824872?v=3&s=460"></img>
+            </Link>
           </div>
           <h1>Maurice Edwards</h1>
           <a href='http://www.emich.edu/compsci/' rel="external" target="_blank">
@@ -40,7 +41,7 @@ var NavigationBar = React.createClass({
               return (
                 <Link to={option.url}>
                   <div className="listItem">
-                    <p>{option.text}</p>
+                    {option.text}
                   </div>
                 </Link>
               );

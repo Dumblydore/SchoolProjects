@@ -1,4 +1,4 @@
-@import 'styles.scss';
+@import 'styles';
 
 html, body {
   background: $background-color;
@@ -45,21 +45,23 @@ html, body {
 }
 
 .listItem {
+  padding: 5px;
   position: inherit;
   font-family: 'Roboto', sans-serif;
   padding-left: 5%;
   height: 40px;
-  width: 95%;
   line-height: 40px;
   color: white;
   text-decoration: none;
-
+  &:link {
+    text-decoration: none;
+  }
   &:hover {
     color: $primary-text-color;
-    background-color: $background-color;
+    background-color: $background-selected-color;
   }
 
   &:visited {
-    color: $primary-text-color;
+    color: $primary-dark-color;
   }
 }
