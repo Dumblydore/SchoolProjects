@@ -1,93 +1,65 @@
-/* Stiziles */
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic,300|Roboto+Mono);
-@import 'palette';
+@import 'styles.scss';
 
 html, body {
-    background: #FAFAFA;
-    //background: #222222;
+  background: $background-color;
+  //background: #222222;
 }
 
 /* main */
 
 .main {
-    width: 100%;
-    height: 100%;
-    color: $primary-text-color;
+  width: 100%;
+  height: 100%;
+  color: $primary-text-color;
 }
 
 .main img {
-    width: 103px;
-    height: 89px;
-    margin-bottom: 10px;
-    text-align: center;
+  width: 103px;
+  height: 89px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.content {
+  background-color: blue;
 }
 
 /* transitions */
 
 .fade-enter {
-    opacity: 0.01;
-    transition: opacity .5s ease-in;
+  opacity: 0.01;
+  transition: opacity .5s ease-in;
 }
 
 .fade-enter.fade-enter-active {
-    opacity: 1;
+  opacity: 1;
 }
 
 .fade-leave {
-    opacity: 1;
-    transition: opacity .5s ease-in;
+  opacity: 1;
+  transition: opacity .5s ease-in;
 }
 
 .fade-leave.fade-leave-active {
-    opacity: 0.01;
+  opacity: 0.01;
 }
 
 .listItem {
-    position: inherit;
-    font-family: 'Roboto', sans-serif;
-    padding-left: 5%;
-    height: 40px;
-    width: 95%;
-    line-height: 40px;
-    color: white;
-    text-decoration: none;
+  position: inherit;
+  font-family: 'Roboto', sans-serif;
+  padding-left: 5%;
+  height: 40px;
+  width: 95%;
+  line-height: 40px;
+  color: white;
+  text-decoration: none;
 
-    &:hover {
-        color: $primary-text-color;
-        background-color: $background-color;
-    }
+  &:hover {
+    color: $primary-text-color;
+    background-color: $background-color;
+  }
 
-    &:visited {
-        color: $primary-text-color;
-    }
-}
-
-.headers {
-    position: absolute;
-    right: 0;
-
-    * {
-        display: inline-block;
-    }
-}
-
-.hobbies-list {
-    position: absolute;
-    left: 30%;
-    h1, ol, ul {
-        color: $primary-text-color;
-    }
-
-}
-
-.ColorTable {
-    position: absolute;
-    bottom: 0;
-    height: 300px;
-    left: 300px;
-    width: 70%;
-    td {
-        position: inherit;
-        height: 25%;
-    }
+  &:visited {
+    color: $primary-text-color;
+  }
 }

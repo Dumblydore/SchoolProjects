@@ -1,3 +1,40 @@
+@import 'global/palette';
+
 .Assignment1 {
-  border: 1px dashed #f00;
+  left: 300px;
+  height: 100%;
+  width: 70%;
+  padding: 30px;
+  position: absolute;
+  .hobbies-list {
+    h1, ol, ul {
+      width: 30%;
+      padding: 0 10% 0 40%;
+      color: $primary-text-color;
+    }
+  }
+
+  .headers {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    * {
+      display: inline-block;
+    }
+  }
+
+  .ColorTable {
+    position: inherit;
+    padding: 0;
+    bottom: 150px;
+    height: 300px;
+    width: 300px;
+    left: 300px;
+    td {
+      position: inherit;
+      height: 25%;
+      width: 25%;
+    }
+  }
 }

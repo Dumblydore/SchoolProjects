@@ -1,18 +1,19 @@
 var AssignmentApp = require('./AssignmentApp');
 import Assignment1 from './Assignment1.js';
 import Home from './Home.js';
+import About from './About.js';
 
 var Router = require('react-router');
-import {DefaultRoute, Route} from 'react-router';
+import {Route, DefaultRoute} from 'react-router';
 var React = require('react');
 
 var content = document.getElementById('content');
 
 var Routes = (
-    <Route handler={AssignmentApp}>
+    <Route name="COSC231" path="/" handler={AssignmentApp}>
         <DefaultRoute handler={Home}/>
-        <Route name="home" path="/home" handler={Home}/>
-        <Route name="assignment1" path="/assignment1" handler={Assignment1}/>
+        <Route name="Assignment1" path="/assignment1" handler={Assignment1}/>
+        <Route name="About" path="/about" handler={About}/>
     </Route>
 );
 
