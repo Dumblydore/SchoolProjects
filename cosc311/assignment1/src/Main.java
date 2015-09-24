@@ -15,30 +15,46 @@ public class Main {
     private static final String MENU_ENTER_BOOK = "Please enter title of book> ";
     private static final String MENU_ENTER_CUSTOMER = "Please enter customer's last name> ";
     private static final String MENU_ENTER_PRICE = "Please enter the price of the book> ";
-    private static final String MENU_ENTER_ORDER = "Please enter the number of orders> ";
+    private static final String MENU_ENTER_ORDER = "Please enter the number of copies> ";
 
     public static void main(String[] args) {
+        String bookTitle, customerName;
+        int orderSize;
+        double price;
         Scanner keyboard = new Scanner(System.in);
         bookStore = new SingleLinkedList<>();
-        System.out.print(MENU);
         while (true) {
+            System.out.print(MENU);
             switch (keyboard.next()) {
                 case "add":
-                    System.out.println("");
-                    String bookName = keyboard.nextLine();
-                    addBook(keyboard.next(), keyboard.nextDouble());
+                    System.out.print(MENU_ENTER_BOOK);
+                    keyboard.nextLine();
+                    bookTitle = keyboard.nextLine();
+                    System.out.print(MENU_ENTER_PRICE);
+                    price = keyboard.nextDouble();
+                    addBook(bookTitle, price);
                     break;
                 case "order":
+                    System.out.print(MENU_ENTER_CUSTOMER);
+                    customerName = keyboard.next();
                     System.out.print(MENU_ENTER_BOOK);
-                    orderBook(keyboard.next(), keyboard.next(), keyboard.nextInt());
+                    keyboard.nextLine();
+                    bookTitle = keyboard.nextLine();
+                    System.out.print(MENU_ENTER_ORDER);
+                    orderSize = keyboard.nextInt();
+                    orderBook(customerName, bookTitle, orderSize);
                     break;
                 case "sell":
-                    System.out.println("Please enter (eg book bookName)> ");
-                    Book(keyboard.next(), keyboard.next());
+                    System.out.print(MENU_ENTER_BOOK);
+                    sellBook(keyboard.next());
                     break;
                 case "cancel":
-                    System.out.println("Please enter (eg book bookName)> ");
-                    Book(keyboard.next(), keyboard.next());
+                    System.out.print(MENU_ENTER_CUSTOMER);
+                    customerName = keyboard.next();
+                    System.out.print(MENU_ENTER_BOOK);
+                    keyboard.nextLine();
+                    bookTitle = keyboard.nextLine();
+                    cancelOrder(customerName, bookTitle);
                     break;
                 case "quit":
                     System.out.println("Good bye!");
@@ -52,18 +68,22 @@ public class Main {
     }
 
     private static void addBook(String bookTitle, double bookPrice) {
-        if (findBook(bookTitle) == -1)
-            System.out.println("Book already exists in the store.");
-        else
+        if (findBook(bookTitle) == -1) {
             bookStore.add(0, new Book(bookTitle, bookPrice));
+            System.out.println(bookStore.get(0).title + " added to store!");
+        } else
+            System.out.println("Book already exists in the store.");
     }
 
     private static void orderBook(String customerName, String bookTitle, int numberOfCopies) {
         int index;
         if ((index = findBook(bookTitle)) == -1)
             System.out.println("The book you're trying to order doesn't exist in the store, please add the book first.");
-        else
+        else {
+            System.out.println(index);
             bookStore.get(index).customers.add(new Customer(customerName, numberOfCopies));
+            System.out.println("Ordering " + numberOfCopies + " books for " + customerName);
+        }
     }
 
     private static void sellBook(String bookTitle) {
@@ -82,7 +102,7 @@ public class Main {
         if ((bookIndex = findBook(bookTitle)) != -1 &&
                 (customerIndex = findCustomer(bookStore.get(bookIndex), customerName)) != -1) {
             bookStore.get(bookIndex).customers.remove(customerIndex);
-            System.out.println("Removed customer: " + customerName + "from the wait list for " + bookTitle);
+            System.out.println("Removed customer: " + customerName + " from the wait list for " + bookTitle);
         } else {
             System.out.println("Book and/or customer do not exist, try again.");
         }
@@ -90,7 +110,8 @@ public class Main {
 
     private static int findCustomer(Book book, String customerName) {
         int index = 0;
-        for (Customer customer : book.customers) {
+        for (int i = 0; i < book.customers.size(); i++) {
+            Customer customer = book.customers.get(i);
             if (customer.lastName.equals(customerName))
                 return index;
             index++;
@@ -100,7 +121,8 @@ public class Main {
 
     private static int findBook(String title) {
         int index = 0;
-        for (Book book : bookStore) {
+        for (int i = 0; i < bookStore.size(); i++) {
+            Book book = bookStore.get(i);
             if (book.title.equals(title)) {
                 return index;
             }
@@ -120,7 +142,6 @@ public class Main {
             this.orderedCopies = orderedCopies;
         }
     }
-
 
     public static class Book {
         public String title;

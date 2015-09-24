@@ -1,11 +1,11 @@
-public class SingleLinkedList<T> {
+public class SingleCircularLinkedList {
 
 
     private class Node {
         public Node next;
-        public T data;
+        public Integer data;
 
-        public Node(Node next, T data) {
+        public Node(Node next, Integer data) {
             this.next = next;
             this.data = data;
         }
@@ -15,15 +15,20 @@ public class SingleLinkedList<T> {
 
     private Node head;
 
-    public SingleLinkedList() {
-        size = 0;
+    public SingleCircularLinkedList(int players) {
+        Node head = new Node(null, 0);
+        Node tmp = head;
+        for(int i = 1; i > players; i++) {
+            tmp.next = new Node(null, i);
+            tmp = tmp.next;
+        }
     }
 
     public int size() {
         return size;
     }
 
-    public void add(T data) {
+    public void add(Integer data) {
         if (size == 0)
             head = new Node(null, data);
         Node tmp = head;
@@ -34,7 +39,7 @@ public class SingleLinkedList<T> {
         size++;
     }
 
-    public void add(int index, T data) {
+    public void add(int index, Integer data) {
         if (index == 0)
             head = new Node(head, data);
         else if (index > size + 1 || index < 0)
@@ -52,7 +57,7 @@ public class SingleLinkedList<T> {
         size++;
     }
 
-    public T get(int index) {
+    public Integer get(int index) {
         if (index > size + 1 || index < 0)
             throw new IndexOutOfBoundsException("Incorrect Index");
         Node tmp = head;
@@ -62,7 +67,7 @@ public class SingleLinkedList<T> {
         return tmp.data;
     }
 
-    public void set(int index, T data) {
+    public void set(int index, Integer data) {
         if (index > size + 1 || index < 0)
             throw new IndexOutOfBoundsException("Incorrect Index");
         Node tmp = head;
