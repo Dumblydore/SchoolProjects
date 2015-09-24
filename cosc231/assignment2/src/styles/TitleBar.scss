@@ -1,3 +1,15 @@
+@import 'styles';
 .TitleBar {
-
+    position: absolute;
+    left: 300px;
+    height: 50px;
+    width: 100%;
+    top: 0;
+    border: 1px dotted red;
+    background: $primary-text-color;
+    color: white;
+    h1 {
+        padding-left: 20px;
+        line-height: 14px;
+    }
 }

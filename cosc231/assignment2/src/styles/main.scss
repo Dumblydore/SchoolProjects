@@ -1,67 +1,79 @@
 @import 'styles';
 
 html, body {
-  background: $background-color;
-  //background: #222222;
+    background: $background-color;
+    //background: #222222;
 }
 
 /* main */
 
 .main {
-  width: 100%;
-  height: 100%;
-  color: $primary-text-color;
+    width: 100%;
+    height: 100%;
+    color: $primary-text-color;
+    .About, .Assignment1, .Lab1 {
+        left: 300px;
+        height: 100%;
+        position: absolute;
+        padding: 0 10px 0 30px;
+    }
+    img {
+        width: 103px;
+        height: 89px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .listItem {
+        padding: 5px;
+        position: inherit;
+        font-family: 'Roboto', sans-serif;
+        padding-left: 5%;
+        height: 40px;
+        line-height: 40px;
+        color: white;
+        text-decoration: none;
+        &.selected {
+            color: $primary-light-color;
+        }
+        &:link {
+            text-decoration: none;
+        }
+        &:hover {
+            color: $primary-text-color;
+            background-color: $background-selected-color;
+        }
+    }
 }
 
-.main img {
-  width: 103px;
-  height: 89px;
-  margin-bottom: 10px;
-  text-align: center;
-}
+a {
+    line-height: 30px;
+    color: $primary-color;
+    text-decoration: none;
 
-.content {
-  background-color: blue;
+    &:visited {
+        color: $primary-dark-color;
+    }
+    &:hover {
+        color: $primary-light-color;
+    }
 }
 
 /* transitions */
 
 .fade-enter {
-  opacity: 0.01;
-  transition: opacity .5s ease-in;
+    opacity: 0.01;
+    transition: opacity .5s ease-in;
 }
 
 .fade-enter.fade-enter-active {
-  opacity: 1;
+    opacity: 1;
 }
 
 .fade-leave {
-  opacity: 1;
-  transition: opacity .5s ease-in;
+    opacity: 1;
+    transition: opacity .5s ease-in;
 }
 
 .fade-leave.fade-leave-active {
-  opacity: 0.01;
-}
-
-.listItem {
-  padding: 5px;
-  position: inherit;
-  font-family: 'Roboto', sans-serif;
-  padding-left: 5%;
-  height: 40px;
-  line-height: 40px;
-  color: white;
-  text-decoration: none;
-  &:link {
-    text-decoration: none;
-  }
-  &:hover {
-    color: $primary-text-color;
-    background-color: $background-selected-color;
-  }
-
-  &:visited {
-    color: $primary-dark-color;
-  }
+    opacity: 0.01;
 }

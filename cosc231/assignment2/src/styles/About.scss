@@ -1,10 +1,18 @@
-.About {
-  left: 300px;
-  height: 100%;
-  position: absolute;
-  padding: 0 10px 0 30px;
+@import "styles";
 
-  .eastern {
-    color: #4CAF50;
-  }
+.About {
+    a {
+        color: $primary-color;
+
+        &:hover {
+            color: $primary-light-color;
+        }
+
+        &:visited {
+            color: $primary-dark-color;
+        }
+    }
+    .eastern {
+        color: #4CAF50;
+    }
 }
