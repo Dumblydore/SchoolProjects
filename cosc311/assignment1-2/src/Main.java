@@ -1,25 +1,32 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.nio.file.FileSystems;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.Comparator;
 import java.util.Scanner;
 
 public class Main {
 
-    private static SingleLinkedList<Student> studentStore;
+    private static DoubleLinkedList<Student> studentStore;
 
     private static final String MENU = "Welcome to the bookstore! - Main menu\n" +
             "**Commands**\n" +
-            "add -> add book menu\n" +
-            "order -> order book menu\n" +
-            "sell -> sell menu\n" +
-            "cancel -> cancel order menu\n" +
-            "quit -> Quit\n" +
+            "1 -> Add student\n" +
+            "2 -> Remove student\n" +
+            "2 -> Load from file \n" +
+            "0 -> Quit\n" +
             ">";
-    private static final String MENU_ENTER_BOOK = "Please enter title of book> ";
-    private static final String MENU_ENTER_CUSTOMER = "Please enter customer's last name> ";
-    private static final String MENU_ENTER_PRICE = "Please enter the price of the book> ";
-    private static final String MENU_ENTER_ORDER = "Please enter the number of copies> ";
+    private static final String MENU_ENTER_ID= "Please enter student's ID> ";
+    private static final String MENU_ENTER_NAME = "Please enter student's name> ";
+    private static final String MENU_ENTER_GPA = "Please enter student's GPA > ";
+    private static final String MENU_ENTER_FILE = "Please enter the file path> ";
 
     public static void main(String[] args) {
         Scanner keyboard = new Scanner(System.in);
-        studentStore = new SingleLinkedList<>();
+        studentStore = new DoubleLinkedList<>();
         while (true) {
             System.out.print(MENU);
             switch (keyboard.next()) {
@@ -46,7 +53,21 @@ public class Main {
         return -1;
     }
 
-    public static class Student {
+    private static DoubleLinkedList<Student> readStudentFromFile(String filePath) throws IOException {
+        Path path = FileSystems.getDefault().getPath(".", filePath);
+        InputStream in = Files.newInputStream(path);
+        BufferedReader reader = new BufferedReader(new InputStreamReader(in));
+
+        DoubleLinkedList<Student> students = new DoubleLinkedList<>();
+        String line = null;
+        while ( (line = reader.readLine()) != null ) {
+            String[] values = line.split(" | ");
+            students.add(new Student(Integer.parseInt(values[0]),values[1],Integer.parseInt(values[2]),Double.parseDouble(values[3])));
+        }
+        return students;
+    }
+
+    public static class Student implements Comparator<Student>{
         public static final int MAX_STUDENT_ID = 1000000;
 
         int id, age;
@@ -55,6 +76,16 @@ public class Main {
 
         public Student(int id, String name, int age, double gpa) {
 
+        }
+
+        @Override
+        public int compare(Student o1, Student o2) {
+            return (o1.id > o2.id) ? 1 : 0;
+        }
+
+        @Override
+        public String toString() {
+            return id + " | " + name + " | " + age + " | " +  gpa;
         }
     }
 }
