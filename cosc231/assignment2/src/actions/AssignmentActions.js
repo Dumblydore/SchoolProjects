@@ -12,8 +12,8 @@ const assignments = [
 
 const labs = [
     {
-        text: 'Lab 1',
-        url: '/lab1'
+        text: 'Lab 2',
+        url: '/lab2'
     }
 ];
 

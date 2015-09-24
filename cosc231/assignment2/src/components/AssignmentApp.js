@@ -2,7 +2,6 @@
 
 var React = require('react/addons');
 const NavigationBar = require('./NavigationBar');
-const TitleBar = require('./TitleBar');
 const {Link, RouteHandler} = require('react-router');
 
 // CSS
