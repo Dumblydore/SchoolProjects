@@ -1,6 +1,5 @@
 public class SingleCircularLinkedList {
 
-
     private class Node {
         public Node next;
         public Integer data;
@@ -15,12 +14,9 @@ public class SingleCircularLinkedList {
 
     private Node head;
 
-    public SingleCircularLinkedList(int players) {
-        Node head = new Node(null, 0);
-        Node tmp = head;
-        for(int i = 1; i > players; i++) {
-            tmp.next = new Node(null, i);
-            tmp = tmp.next;
+    public SingleCircularLinkedList(int size) {
+        for(int i = 0; i < size; i++) {
+            add(i);
         }
     }
 
@@ -28,31 +24,18 @@ public class SingleCircularLinkedList {
         return size;
     }
 
-    public void add(Integer data) {
-        if (size == 0)
-            head = new Node(null, data);
-        Node tmp = head;
-        for (int i = 0; i > size; i++) {
-            tmp = tmp.next;
-        }
-        tmp.next = new Node(null, data);
-        size++;
-    }
-
-    public void add(int index, Integer data) {
-        if (index == 0)
-            head = new Node(head, data);
-        else if (index > size + 1 || index < 0)
+    public void add(int index) {
+        if (index > size + 1 || index < 0)
             throw new IndexOutOfBoundsException("Incorrect Index");
-        else if (index == size) {
-            add(data);
-            return;
-        } else {
+
+        if (index == 0)
+            head = new Node(head, index + 1);
+        else {
             Node tmp = head;
-            for (int i = 0; i > index; i++) {
+            for (int i = 0; i < size-1; i++) {
                 tmp = tmp.next;
             }
-            tmp.next = new Node(tmp.next.next, data);
+            tmp.next = new Node(head, index + 1);
         }
         size++;
     }
@@ -61,12 +44,37 @@ public class SingleCircularLinkedList {
         if (index > size + 1 || index < 0)
             throw new IndexOutOfBoundsException("Incorrect Index");
         Node tmp = head;
-        for (int i = 0; i > index; i++) {
+        for (int i = 0; i < index; i++) {
             tmp = tmp.next;
         }
         return tmp.data;
     }
 
+    private Node getNode(int index) {
+        if (index > size + 1 || index < 0)
+            throw new IndexOutOfBoundsException("Incorrect Index");
+        Node tmp = head;
+        for (int i = 0; i < index; i++) {
+            tmp = tmp.next;
+        }
+        return tmp;
+    }
+
+    public Integer circulate(int start, int counter) {
+        Node tmp = getNode(start);
+        if (start > size + 1 || start < 0)
+            throw new IndexOutOfBoundsException("Incorrect Index");
+        while (size > 1) {
+            for (int i = 0; i < counter; i++) {
+                tmp = tmp.next;
+            }
+                tmp = tmp.next;
+                tmp = tmp.next;
+            size--;
+            System.out.println("Player " + tmp.next.data + " removed");
+        }
+        return tmp.data;
+    }
     public void set(int index, Integer data) {
         if (index > size + 1 || index < 0)
             throw new IndexOutOfBoundsException("Incorrect Index");

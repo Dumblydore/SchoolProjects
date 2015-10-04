@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/assignment1/assignment1.iml" filepath="$PROJECT_DIR$/assignment1/assignment1.iml" />
-      <module fileurl="file://$PROJECT_DIR$/assignment1-2/assignment1-2.iml" filepath="$PROJECT_DIR$/assignment1-2/assignment1-2.iml" />
-      <module fileurl="file://$PROJECT_DIR$/assignment1-3/assignment1-3.iml" filepath="$PROJECT_DIR$/assignment1-3/assignment1-3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Assignment 2/Assignment2-1/Assignment2-1.iml" filepath="$PROJECT_DIR$/Assignment 2/Assignment2-1/Assignment2-1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Assignment 2/Assingment 2-2/Assingment 2-2.iml" filepath="$PROJECT_DIR$/Assignment 2/Assingment 2-2/Assingment 2-2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Assignment 1/assignment1-1/assignment1-1.iml" filepath="$PROJECT_DIR$/Assignment 1/assignment1-1/assignment1-1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Assignment 1/assignment1-2/assignment1-2.iml" filepath="$PROJECT_DIR$/Assignment 1/assignment1-2/assignment1-2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Assignment 1/assignment1-3/assignment1-3.iml" filepath="$PROJECT_DIR$/Assignment 1/assignment1-3/assignment1-3.iml" />
       <module fileurl="file://$PROJECT_DIR$/cosc311.iml" filepath="$PROJECT_DIR$/cosc311.iml" />
     </modules>
   </component>
