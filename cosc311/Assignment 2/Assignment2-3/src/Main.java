@@ -14,7 +14,7 @@ public class Main {
         squareStack = new Stack<LineCharacter>();
         braceStack = new Stack<LineCharacter>();
         try {
-            textCheck("{{}{}\n\n}{");
+            textCheck("{{}{}\n\n}{}]");
         } catch (ParenthesisImbalanceErrorException e) {
             e.printStackTrace();
         }
@@ -28,23 +28,43 @@ public class Main {
                     braceStack.push(new LineCharacter('{', lineNumber));
                     break;
                 case '}':
-                    if(braceStack.isEmpty())
+                    if(braceStack.isEmpty()) {
+                    if(!parenthesisStack.isEmpty())
+                        throw new ParenthesisImbalanceErrorException(lineNumber, "( closed with }");
+                    else if (!squareStack.isEmpty())
+                        throw new ParenthesisImbalanceErrorException(lineNumber, "[ closed with }");
+                    else
                         throw new ParenthesisImbalanceErrorException(lineNumber, "Premature closing of {");
+                }
                     braceStack.pop();
                     break;
                 case '(':
                     parenthesisStack.push(new LineCharacter('(', lineNumber));
                     break;
                 case ')':
-                    if(braceStack.isEmpty())
-                        throw new ParenthesisImbalanceErrorException(lineNumber, "Premature closing of (");
+                    if(parenthesisStack.isEmpty()) {
+                        if(!braceStack.isEmpty())
+                            throw new ParenthesisImbalanceErrorException(lineNumber, "{ closed with )");
+                        else if (!squareStack.isEmpty())
+                            throw new ParenthesisImbalanceErrorException(lineNumber, "[ closed with )");
+                        else
+                            throw new ParenthesisImbalanceErrorException(lineNumber, "Premature closing of (");
+                    }
+                    parenthesisStack.pop();
                     break;
                 case '[':
                     squareStack.push(new LineCharacter('[', lineNumber));
                     break;
                 case ']':
-                    if(squareStack.isEmpty())
+                    if(squareStack.isEmpty()) {
+                    if(!parenthesisStack.isEmpty())
+                        throw new ParenthesisImbalanceErrorException(lineNumber, "( closed with ]");
+                    else if (!braceStack.isEmpty())
+                        throw new ParenthesisImbalanceErrorException(lineNumber, "{ closed with ]");
+                    else
                         throw new ParenthesisImbalanceErrorException(lineNumber, "Premature closing of [");
+                }
+                    squareStack.pop();
                     break;
                 case '\n':
                     lineNumber++;
