@@ -14,6 +14,14 @@ const labs = [
     {
         text: 'Lab 2',
         url: '/lab2'
+    },
+    {
+        text: 'Lab 4',
+        url: '/lab4'
+    },
+    {
+        text: 'Lab 5',
+        url: '/lab5'
     }
 ];
 
