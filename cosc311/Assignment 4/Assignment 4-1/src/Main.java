@@ -1,8 +1,10 @@
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.nio.file.FileSystems;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.Arrays;
 import java.util.Stack;
 
 public class Main {
@@ -10,17 +12,13 @@ public class Main {
     protected static Move[][] map;
     static Move endMove;
     private static boolean isComplete;
+    private static Stack<Move> moves;
 
     public static void main(String... args) {
-        String filePath = "test";
+        moves = new Stack<>();
+        String filePath = "test.txt";
         Path path = FileSystems.getDefault().getPath(".", filePath);
         InputStream in;
-        File file = new File("./");
-        File[] list = file.listFiles();
-        if(list!=null)
-            for (File fil : list) {
-//                System.out.println(fil.getPath());
-            }
         try {
             in = Files.newInputStream(path);
             BufferedReader reader = new BufferedReader(new InputStreamReader(in));
@@ -51,6 +49,11 @@ public class Main {
             reader.close();
             move(startPoint);
             System.out.println(isComplete ? "Yes" : "No");
+            System.out.print("Path: ");
+            while(!moves.isEmpty()) {
+                Move cMove = moves.pop();
+                System.out.print("{" + cMove.y + ", " + cMove.x + "} ");
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -65,22 +68,23 @@ public class Main {
 
     public static void move(Move fromMove) {
         fromMove.isVisited = true;
-        printMap();
-        if (fromMove.equals(endMove) || isComplete) {
-            System.out.println("complete!");
+        if (fromMove.equals(endMove)) {
+            moves.add(fromMove);
             isComplete = true;
             return;
         }
-        if (isSpaceAvailable('n', fromMove))
-            move(map[fromMove.x][fromMove.y + 1]);
-        if (isSpaceAvailable('e', fromMove))
-            move(map[fromMove.x + 1][fromMove.y]);
-        if (isSpaceAvailable('s', fromMove))
-            move(map[fromMove.x][fromMove.y - 1]);
-        if (isSpaceAvailable('w', fromMove))
-            move(map[fromMove.x - 1][fromMove.y]);
+        if (isSpaceAvailable('n', fromMove) && !isComplete)
+            move(map[fromMove.y + 1][fromMove.x]);
+        if (isSpaceAvailable('e', fromMove) && !isComplete)
+            move(map[fromMove.y][fromMove.x + 1]);
+        if (isSpaceAvailable('s', fromMove) && !isComplete)
+            move(map[fromMove.y - 1][fromMove.x]);
+        if (isSpaceAvailable('w', fromMove) && !isComplete)
+            move(map[fromMove.y][fromMove.x - 1]);
 
-        if (!isComplete) {
+        if (isComplete && fromMove.isVisited) {
+            moves.add(fromMove);
+        } else {
             fromMove.isVisited = false;
         }
     }
@@ -104,17 +108,20 @@ public class Main {
         }
 
         try {
-            Move move = map[x][y];
+            Move move = map[y][x];
             return !(move.isVisited || move.isWall);
         } catch (ArrayIndexOutOfBoundsException e) {
             return false;
         }
     }
 
-    public static void printMap() {
+    public static void printMap(Move currentMove) {
         for (Move[] column : map) {
             for (Move row : column) {
-                System.out.print(row + " ");
+                if(row.equals(currentMove))
+                    System.out.print("x ");
+                else
+                    System.out.print(row + " ");
             }
             System.out.println();
         }

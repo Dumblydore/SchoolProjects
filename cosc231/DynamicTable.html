@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <script type="text/javascript">
+  var tableSize = 1;
+  var createTable = function (table, id) {
+    var tableHtml  = '<table id="'+id+'"><tbody>';
+    table.map(function (row) {
+      var rowHtml = '<tr>';
+      row.map(function (cell) {
+        rowHtml += '<td>' + cell + '</td>'
+        tableSize++;
+      });
+
+      rowHtml += '</tr>';
+      tableHtml += rowHtml;
+    });
+
+    tableHtml += '</tbody></table>';
+    document.write(tableHtml);
+  };
+
+ var addRow = function (id) {
+    table = document.getElementById(id);
+      var rowHtml = table.insertRow();
+      var cellHtml = rowHtml.insertCell();
+      cellHtml.innerHTML = tableSize;
+      tableSize++;
+    };
+  
+    </script>
+
+  <title>Dynamic Table</title>
+</head>
+<body>
+  <input type="button" onclick="addRow('table')" value="Add Row"></body>
+  <script type="text/javascript">
+  var table = [
+    ['1'],
+    ['2']
+  ];
+    createTable(table, 'table');
+  </script>
+</body>
+</html>

@@ -68,13 +68,13 @@ public class Main {
                 return true;
             if (isSpaceAvailable('n', currentMove)) {
                 moveHistory.push(currentMove);
-                currentMove = map[currentMove.x][currentMove.y + 1];
+                currentMove = map[currentMove.y + 1][currentMove.x];
             } else if (isSpaceAvailable('e', currentMove)) {
                 moveHistory.push(currentMove);
-                currentMove = map[currentMove.x + 1][currentMove.y];
+                currentMove = map[currentMove.y][currentMove.x + 1];
             } else if (isSpaceAvailable('s', currentMove)) {
                 moveHistory.push(currentMove);
-                currentMove = map[currentMove.x][currentMove.y - 1];
+                currentMove = map[currentMove.y - 1][currentMove.x];
             } else if (isSpaceAvailable('w', currentMove)) {
                 currentMove.isVisited = true;
                 moveHistory.push(currentMove);
