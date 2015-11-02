@@ -1,3 +1,32 @@
 .Lab5 {
 
+    .north,
+    .south,
+    .east,
+    .west {
+        position: absolute;
+        padding: 50px;
+        width: 200px;
+        height: 150px;
+    }
+
+    .north {
+        top: 0;
+        left: 150px;
+    }
+
+    .south {
+        left: 150px;
+        bottom: 30px;
+    }
+
+    .west {
+        top: 250px;
+        left: 300px;
+    }
+
+    .east {
+        top: 250px;
+        left: 0;
+    }
 }

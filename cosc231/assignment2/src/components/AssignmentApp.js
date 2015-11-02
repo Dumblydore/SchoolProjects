@@ -10,14 +10,17 @@ require('../styles/main.scss');
 
 
 var AssignmentApp = React.createClass({
-  render: function () {
-    return (
-      <div className="main">
-        <NavigationBar></NavigationBar>
-        <RouteHandler/>
-      </div>
-    );
-  }
+    render: function () {
+        return (
+            <div className="main">
+                <NavigationBar></NavigationBar>
+
+                <div className="content">
+                    <RouteHandler/>
+                </div>
+            </div>
+        );
+    }
 });
 
 module.exports = AssignmentApp;

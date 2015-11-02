@@ -17,7 +17,10 @@ var About = React.createClass({
             <div className="About">
                 <h1>Maurice Edwards</h1>
 
-                <p>I am a 4th year Computer Science student at <span className="eastern">Eastern</span> Michigan
+                <p>
+                    <img className="img"
+                         src="https://avatars3.githubusercontent.com/u/5824872?v=3&s=460"></img>
+                    I am a 4th year Computer Science student at <span className="eastern">Eastern</span> Michigan
                     University.
                     I have been interning at TD Ameritrade for about a year. At this internship I've been developing
                     backend services

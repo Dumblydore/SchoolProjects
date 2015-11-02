@@ -17,7 +17,7 @@ const labs = [
     },
     {
         text: 'Lab 4',
-        url: '/lab4'
+        url: '/permute'
     },
     {
         text: 'Lab 5',

@@ -2,19 +2,23 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/.eslintrc" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/gulpfile.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/package.json" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/actions/AssignmentActions.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/components/AssignmentApp.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/components/ColorTable.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/components/Lab2.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/components/Lab4.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/components/Lab5.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/components/NavigationBar.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/components/main.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/stores/AssignmentStore.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/styles/About.scss" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/styles/Assignment1.scss" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/styles/ColorTable.scss" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/styles/Home.scss" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/styles/Lab2.scss" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/styles/Lab4.scss" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/styles/Lab5.scss" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/styles/NavigationBar.scss" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/styles/global/palette.scss" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/styles/main.scss" charset="UTF-8" />

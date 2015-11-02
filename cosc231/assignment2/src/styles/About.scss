@@ -1,6 +1,10 @@
 @import "styles";
 
 .About {
+    .img {
+        float: left;
+        padding-right: 20px;
+    }
     a {
         color: $primary-color;
 
