@@ -4,42 +4,6 @@ var React = require('react/addons');
 
 require('styles/Lab4.scss');
 
-let players = [
-    {
-        name: 'North',
-        hand: []
-    },
-    {
-        name: 'West',
-        hand: []
-    },
-    {
-        name: 'South',
-        hand: []
-    },
-    {
-        name: 'East',
-        hand: []
-    }
-];
-
-let deck = function () {
-    let cards = [];
-    for (let i = 0; i < 52; i++) {
-        cards.push(i);
-    }
-    return cards;
-}();
-
-let deal = function () {
-    players.map(player => {
-        for (let i = 0; i < 13; i++) {
-            let cardNumber = deck.pop();
-            player.hand.push(suit(cardNumber) + rank(cardNumber));
-        }
-    });
-};
-
 let suit = function (pos) {
     if (pos < 12) {
         return '\u2663';
@@ -76,14 +40,50 @@ let shuffle = function (cards) {
     return cards;
 };
 
-
 var Lab4 = React.createClass({
 
+    getInitialState: function () {
+        let deck = function () {
+            let cards = [];
+            for (let i = 0; i < 52; i++) {
+                cards.push(i);
+            }
+            return cards;
+        }();
+        return {
+            deck: shuffle(deck),
+            players: [
+                {
+                    name: 'North',
+                    hand: []
+                },
+                {
+                    name: 'West',
+                    hand: []
+                },
+                {
+                    name: 'South',
+                    hand: []
+                },
+                {
+                    name: 'East',
+                    hand: []
+                }
+            ]
+        };
+    },
+    deal: function () {
+        this.state.players.map(player => {
+            for (let i = 0; i < 13; i++) {
+                let cardNumber = this.state.deck.pop();
+                player.hand.push(suit(cardNumber) + rank(cardNumber));
+            }
+        });
+    },
     render: function () {
-        deck = shuffle(deck);
-        deal();
+        this.deal();
         let items = [];
-        players.map(player => {
+        this.state.players.map(player => {
             items.push(
                 <p>{player.name}: {player.hand.map(card => {
                     return card + ' ';

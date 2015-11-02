@@ -4,54 +4,6 @@ var React = require('react/addons');
 
 require('styles/Lab5.scss');
 
-let players = [
-    {
-        name: 'North',
-        '\u2663': [],
-        '\u2666': [],
-        '\u2665': [],
-        '\u2660': []
-    },
-    {
-        name: 'West',
-        '\u2663': [],
-        '\u2666': [],
-        '\u2665': [],
-        '\u2660': []
-    },
-    {
-        name: 'South',
-        '\u2663': [],
-        '\u2666': [],
-        '\u2665': [],
-        '\u2660': []
-    },
-    {
-        name: 'East',
-        '\u2663': [],
-        '\u2666': [],
-        '\u2665': [],
-        '\u2660': []
-    }
-];
-
-let deck = function () {
-    let cards = [];
-    for (let i = 0; i < 52; i++) {
-        cards.push(i);
-    }
-    return cards;
-}();
-
-let deal = function () {
-    players.map(player => {
-        for (let i = 0; i < 13; i++) {
-            let index = deck.pop();
-            player[suit(index)].push(rank(index));
-        }
-    });
-};
-
 let suit = function (pos) {
     if (pos < 12) {
         return '\u2663';
@@ -91,11 +43,62 @@ let shuffle = function (cards) {
 
 var Lab5 = React.createClass({
 
+    getInitialState: function () {
+        let deck = function () {
+            let cards = [];
+            for (let i = 0; i < 52; i++) {
+                cards.push(i);
+            }
+            return cards;
+        }();
+        return {
+            deck: shuffle(deck),
+            players: [
+                {
+                    name: 'North',
+                    '\u2663': [],
+                    '\u2666': [],
+                    '\u2665': [],
+                    '\u2660': []
+                },
+                {
+                    name: 'West',
+                    '\u2663': [],
+                    '\u2666': [],
+                    '\u2665': [],
+                    '\u2660': []
+                },
+                {
+                    name: 'South',
+                    '\u2663': [],
+                    '\u2666': [],
+                    '\u2665': [],
+                    '\u2660': []
+                },
+                {
+                    name: 'East',
+                    '\u2663': [],
+                    '\u2666': [],
+                    '\u2665': [],
+                    '\u2660': []
+                }
+            ]
+        };
+    },
+
+    deal: function() {
+        this.state.players.map(player => {
+            for (let i = 0; i < 13; i++) {
+                let index = this.state.deck.pop();
+                player[suit(index)].push(rank(index));
+            }
+        });
+    },
+
     render: function () {
-        deck = shuffle(deck);
-        deal();
+        this.deal();
         let items = [];
-        players.map(player => {
+        this.state.players.map(player => {
             items.push(
                 <div className={player.name.toLowerCase()}>
                     <p>{player.name}</p>

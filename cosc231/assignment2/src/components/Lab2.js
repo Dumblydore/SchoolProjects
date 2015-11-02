@@ -7,6 +7,18 @@ require('styles/Lab2.scss');
 
 var Lab2 = React.createClass({
 
+    getInitialState: () => {
+        return (
+        {value: 'small'}
+        );
+    },
+
+    onOptionSelected: function (item) {
+        this.setState({
+           value: item.currentTarget.value
+        });
+    },
+
     render: function () {
         return (
             <div className='Lab2'>
@@ -41,16 +53,16 @@ var Lab2 = React.createClass({
                 </table>
                 <form>
                     <label>Select the size you want: </label>
-                    <input type='radio' name='size'/>Small
-                    <input type='radio' name='size' checked/>Medium
-                    <input type='radio' name='size'/>Big
+                    <input type='radio' value='small' checked={this.state.value === 'small'} onChange={this.onOptionSelected} name='size'/>Small
+                    <input type='radio' value='medium' checked={this.state.value === 'medium'} onChange={this.onOptionSelected} name='size'/>Medium
+                    <input type='radio' value='big' checked={this.state.value === 'big'} onChange={this.onOptionSelected} name='size'/>Big
                     <br/>
-                    Enter your name: <input type='text' />
+                    Enter your name: <input type='text'/>
                     <br/>
                     Select the features you want:
-                    <input type='checkbox' />Long sleeves
-                    <input type='checkbox' />Turtleneck
-                    <input type='checkbox' />Long torso
+                    <input type='checkbox'/>Long sleeves
+                    <input type='checkbox'/>Turtleneck
+                    <input type='checkbox'/>Long torso
                 </form>
             </div>
         );
