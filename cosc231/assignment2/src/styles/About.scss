@@ -5,17 +5,7 @@
         float: left;
         padding-right: 20px;
     }
-    a {
-        color: $primary-color;
 
-        &:hover {
-            color: $primary-light-color;
-        }
-
-        &:visited {
-            color: $primary-dark-color;
-        }
-    }
     .eastern {
         color: #4CAF50;
     }
