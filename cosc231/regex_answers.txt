@@ -1,0 +1,10 @@
+\w
+\.
+[cmf]
+[^bog]
+[A-C]
+z{3}
+aa+
+\?
+\s
+ successful$
