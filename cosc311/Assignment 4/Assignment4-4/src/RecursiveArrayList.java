@@ -47,8 +47,8 @@ public class RecursiveArrayList {
         return sum(index + 1, sum += container[index]);
     }
 
-    private boolean containsZero() {
-        return contains(0, 0);
+    public void containsZero() {
+        System.out.println(contains(0, 0) ? "List contains zeros." : "List doesn't contain zeros.");
     }
 
     private boolean contains(int n, int index) {

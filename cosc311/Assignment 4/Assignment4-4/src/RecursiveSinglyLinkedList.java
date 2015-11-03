@@ -59,8 +59,8 @@ public class RecursiveSinglyLinkedList {
         return sum(node.next, sum += node.data);
     }
 
-    private boolean containsZero() {
-        return contains(0, head);
+    public void containsZero() {
+        System.out.println(contains(0, head) ? "List contains zeros." : "List doesn't contain zeros.");
     }
 
     private boolean contains(int n, Node node) {

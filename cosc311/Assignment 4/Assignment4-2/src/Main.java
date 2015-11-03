@@ -27,7 +27,7 @@ public class Main {
         int size = rows * columns;
         map[locationX][locationY] = move;
         if (move >= size) {
-            System.out.print("Output: ");
+            System.out.println("Output: ");
             isComplete = true;
             return;
         }
