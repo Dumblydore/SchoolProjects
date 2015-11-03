@@ -5,6 +5,7 @@ import java.io.InputStreamReader;
 import java.nio.file.FileSystems;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.Scanner;
 import java.util.Stack;
 
 public class Main {
@@ -16,8 +17,22 @@ public class Main {
 
     public static void main(String... args) {
         moves = new Stack<>();
-        String filePath = "test.txt";
-        Path path = FileSystems.getDefault().getPath(".", filePath);
+        Scanner keyboard = new Scanner(System.in);
+        System.out.print("Enter filepath: ");
+        String filePath = keyboard.next();
+        loadMap(filePath);
+        if (isComplete) {
+            System.out.print("Path: ");
+            while (!moves.isEmpty()) {
+                System.out.print(moves.pop() + " ");
+            }
+        } else {
+            System.out.println("Map could not be completed.");
+        }
+    }
+
+    private static void loadMap(String fileName) {
+        Path path = FileSystems.getDefault().getPath(".", fileName);
         InputStream in;
         try {
             in = Files.newInputStream(path);
@@ -45,27 +60,21 @@ public class Main {
             //Gets start & end points
             Move startPoint = getPoint(reader.readLine());
             endMove = getPoint(reader.readLine());
-
             reader.close();
             move(startPoint);
-            System.out.println(isComplete ? "Yes" : "No");
-            System.out.print("Path: ");
-            while(!moves.isEmpty()) {
-                Move cMove = moves.pop();
-                System.out.print("{" + cMove.y + ", " + cMove.x + "} ");
-            }
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
+    //get start & and points from line
     private static Move getPoint(String pointString) {
-
         String[] dimensions = pointString.split(" ");
         return new Move(false, Integer.parseInt(dimensions[1]),
                 Integer.parseInt(dimensions[0]));
     }
 
+    /*each 'movement' in the method requires the space to be available.*/
     public static void move(Move fromMove) {
         fromMove.isVisited = true;
         if (fromMove.equals(endMove)) {
@@ -73,13 +82,13 @@ public class Main {
             isComplete = true;
             return;
         }
-        if (isSpaceAvailable('n', fromMove) && !isComplete)
+        if (isSpaceAvailable('n', fromMove))
             move(map[fromMove.y + 1][fromMove.x]);
-        if (isSpaceAvailable('e', fromMove) && !isComplete)
+        if (isSpaceAvailable('e', fromMove))
             move(map[fromMove.y][fromMove.x + 1]);
-        if (isSpaceAvailable('s', fromMove) && !isComplete)
+        if (isSpaceAvailable('s', fromMove))
             move(map[fromMove.y - 1][fromMove.x]);
-        if (isSpaceAvailable('w', fromMove) && !isComplete)
+        if (isSpaceAvailable('w', fromMove))
             move(map[fromMove.y][fromMove.x - 1]);
 
         if (isComplete && fromMove.isVisited) {
@@ -89,6 +98,7 @@ public class Main {
         }
     }
 
+    //Checks if the space exists, a wall, if the space has been visited, and if the maze was completed.
     private static boolean isSpaceAvailable(char direction, Move currentSpace) {
         int x = currentSpace.x;
         int y = currentSpace.y;
@@ -109,23 +119,10 @@ public class Main {
 
         try {
             Move move = map[y][x];
-            return !(move.isVisited || move.isWall);
+            return (!(move.isVisited || move.isWall) && !isComplete);
         } catch (ArrayIndexOutOfBoundsException e) {
             return false;
         }
-    }
-
-    public static void printMap(Move currentMove) {
-        for (Move[] column : map) {
-            for (Move row : column) {
-                if(row.equals(currentMove))
-                    System.out.print("x ");
-                else
-                    System.out.print(row + " ");
-            }
-            System.out.println();
-        }
-        System.out.println();
     }
 
     public static class Move {
@@ -149,7 +146,7 @@ public class Main {
 
         @Override
         public String toString() {
-            return isWall ? "1" : isVisited ? "v" : "0";
+            return "(" + y + ", " + x + ")";
         }
     }
 }

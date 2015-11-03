@@ -1,10 +1,4 @@
-/**
- * Created by medwar40 on 10/30/15.
- */
 public class RecursiveArrayList {
-    /**
-     * Created by medwar40 on 10/30/15.
-     */
     int[] container;
 
     public RecursiveArrayList() {

@@ -6,28 +6,28 @@ public class Main {
     static boolean isComplete;
 
     public static void main(String... args) {
-        columns = 4;
-        rows = 3;
-        locationX = 1;
-        locationY = 3;
-        /*Scanner input = new Scanner(System.in);
+
+        Scanner input = new Scanner(System.in);
         System.out.print("Enter number of rows: ");
         rows = input.nextInt();
         System.out.print("Enter number of columns: ");
         columns = input.nextInt();
         System.out.print("Enter starting location: ");
+        locationX = input.nextInt();
         locationY = input.nextInt();
-        locationX = input.nextInt();*/
         map = new int[rows][columns];
         move(locationX, locationY, 1);
-        printMap();
+        if(isComplete)
+            printMap();
+        else
+            System.out.println("Could not be completed.");
     }
 
     public static void move(int locationX, int locationY, int move) {
         int size = rows * columns;
         map[locationX][locationY] = move;
         if (move >= size) {
-            System.out.println("complete!");
+            System.out.print("Output: ");
             isComplete = true;
             return;
         }
@@ -51,6 +51,8 @@ public class Main {
             map[locationX][locationY] = 0;
         }
     }
+
+    /*checks if the coordinates are valid, space has been visited and if board is already completed*/
     public static boolean isSpaceAvailable(int x, int y) {
         return rows > x && columns > y && x >= 0 && y >= 0 && map[x][y] == 0 && !isComplete;
     }
