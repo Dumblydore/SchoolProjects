@@ -1,5 +1,4 @@
 .Lab5 {
-
     .north,
     .south,
     .east,
@@ -7,7 +6,6 @@
         position: absolute;
         padding: 50px;
         width: 200px;
-        height: 150px;
     }
 
     .north {
@@ -17,16 +15,16 @@
 
     .south {
         left: 150px;
-        bottom: 30px;
+        top: 500px;
     }
 
     .west {
         top: 250px;
-        left: 300px;
+        left: 0;
     }
 
     .east {
         top: 250px;
-        left: 0;
+        left: 300px;
     }
 }
