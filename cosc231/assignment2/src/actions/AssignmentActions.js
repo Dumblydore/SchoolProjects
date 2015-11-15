@@ -21,7 +21,7 @@ const labs = [
     },
     {
         text: 'Lab 5',
-        url: '/lab5'
+        url: '/testCards'
     }
 ];
 

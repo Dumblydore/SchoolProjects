@@ -92,7 +92,7 @@ var Lab4 = React.createClass({
         });
         return (
             <div className="Lab4">
-                <h1>Cards</h1>
+                <h1>Permute</h1>
                 {items}
             </div>
         );

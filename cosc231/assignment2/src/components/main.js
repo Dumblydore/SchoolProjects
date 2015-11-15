@@ -19,7 +19,7 @@ var Routes = (
         <Route name="About" path="/assignment2" handler={About}/>
         <Route name="Lab 2" path="/lab2" handler={Lab2}/>
         <Route name="Lab 4" path="/permute" handler={Lab4}/>
-        <Route name="Lab 5" path="/lab5" handler={Lab5}/>
+        <Route name="Lab 5" path="/testCards" handler={Lab5}/>
     </Route>
 );
 

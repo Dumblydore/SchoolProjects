@@ -22,6 +22,7 @@ var Lab2 = React.createClass({
     render: function () {
         return (
             <div className='Lab2'>
+                <h1>Lab 2</h1>
                 <table>
                     <th>
                         <td className='header' style={{color: '#F44336'}}>Red</td>

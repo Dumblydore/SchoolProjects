@@ -39,7 +39,7 @@ var NavigationBar = React.createClass({
                                  src="https://avatars3.githubusercontent.com/u/5824872?v=3&s=460"></img>
                         </Link>
                     </div>
-                    <h1>Maurice Edwards</h1>
+                    <h4>Maurice Edwards</h4>
                     <a href='http://www.emich.edu/compsci/' rel="external" target="_blank">
                         <p>Computer Science Department</p>
                     </a>

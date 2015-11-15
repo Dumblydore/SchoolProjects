@@ -1,4 +1,12 @@
 .Lab5 {
+
+    h1, .hand {
+        display: block;
+    }
+
+    .hand {
+        position: relative;
+    }
     .north,
     .south,
     .east,
@@ -9,6 +17,7 @@
     }
 
     .north {
+        padding-top: 0;
         top: 0;
         left: 150px;
     }

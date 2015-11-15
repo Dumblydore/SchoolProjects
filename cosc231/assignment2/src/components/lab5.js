@@ -86,7 +86,7 @@ var Lab5 = React.createClass({
         };
     },
 
-    deal: function() {
+    deal: function () {
         this.state.players.map(player => {
             for (let i = 0; i < 13; i++) {
                 let index = this.state.deck.pop();
@@ -123,8 +123,11 @@ var Lab5 = React.createClass({
         });
         return (
             <div className="Lab5">
-                <h1>Cards</h1>
-                {items}
+                <h1>Test Cards</h1>
+
+                <div className="hand">
+                    {items}
+                </div>
             </div>
         );
     }
