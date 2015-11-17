@@ -9,7 +9,7 @@ var Assignment1 = React.createClass({
   render: function () {
     return (
       <div className="Assignment1">
-        <h2>Top 3 Movies</h2>
+        <h1>Top 3 Movies</h1>
         <ol>
           <li>Pulp Fiction</li>
           <ul>
