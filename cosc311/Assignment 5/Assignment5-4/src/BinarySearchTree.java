@@ -1,23 +1,18 @@
-import java.io.*;
-import java.nio.file.FileSystems;
-import java.nio.file.Files;
-import java.nio.file.Path;
-
 /**
  * Created by medwar40 on 11/5/15.
  */
-public class BinarySearchTree<T extends Comparable> {
+public class BinarySearchTree {
 
   private class Node {
     Node left;
     Node right;
-    T data;
+    int data;
 
-    public Node(T data) {
+    public Node(int data) {
       this.data = data;
     }
 
-    public Node(Node left, Node right, T data) {
+    public Node(Node left, Node right, int data) {
       this.left = left;
       this.right = right;
       this.data = data;
@@ -27,11 +22,13 @@ public class BinarySearchTree<T extends Comparable> {
   private Node root;
 
 
-  public BinarySearchTree() {
+  public BinarySearchTree(int[] numbers) {
     root = null;
+    for (int i : numbers)
+      add(i);
   }
 
-  public boolean add(T item) {
+  public boolean add(int item) {
     if (root == null) { //if root is make the new node root
       root = new Node(item);
       return true;
@@ -39,10 +36,10 @@ public class BinarySearchTree<T extends Comparable> {
       Node current = root;
       Node prev = null;
       while (current != null) { //iterates until iterator is null
-        if (current.data.compareTo(item) == 0) //returns false if data exists in tree
+        if (current.data == item) //returns false if data exists in tree
           return false;
           //iterator goes less if iterators data is greater than new item's
-        else if (current.data.compareTo(item) > 0) {
+        else if (current.data > item) {
           prev = current;
           current = current.left;
           //otherwise it goes right
@@ -51,7 +48,7 @@ public class BinarySearchTree<T extends Comparable> {
           current = current.right;
         }
       }
-      if (prev.data.compareTo(item) > 0)
+      if (prev.data > item)
         prev.left = new Node(item);
       else
         prev.right = new Node(item);
@@ -60,57 +57,82 @@ public class BinarySearchTree<T extends Comparable> {
   }
 
   //recursive function to find data
-  public boolean find(T data) {
+  public boolean find(int data) {
     return find(data, root);
   }
 
-  private boolean find(T data, Node node) {
+  private boolean find(int data, Node node) {
     //if node is null return false
     if (node == null)
       return false;
       //if node data is equal return true
-    else if (node.data.compareTo(data) == 0)
+    else if (node.data == data) {
+      System.out.print(node.data);
       return true;
       //if data is less than current node's data go left in tree
-    else if (node.data.compareTo(data) > 0)
+    } else if (node.data > data) {
+      System.out.print(node.data + " > ");
       return find(data, node.left);
       //otherwise go right
-    else
+    } else {
+      System.out.print(node.data + " > ");
       return find(data, node.right);
+    }
+  }
+
+  //specific recursive function to find zero
+  public boolean findZero() {
+    return findZero(0, root);
+  }
+
+  private boolean findZero(int data, Node node) {
+    //if node is null return false
+    if (node == null)
+      return false;
+      //if node data is equal return true
+    else if (node.data == data) {
+      return true;
+      //if data is less than current node's data go left in tree
+    } else if (node.data > data) {
+      return find(data, node.left);
+      //otherwise go right
+    } else {
+      return find(data, node.right);
+    }
   }
 
   //recursive function to edit data
-  public boolean edit(T data) {
+  public boolean edit(int data) {
     return edit(data, root);
   }
 
-  private boolean edit(T data, Node node) {
+  private boolean edit(int data, Node node) {
     //if node is null return false
     if (node == null)
       return false;
       //if data is 'equal' then replace the node's data with new data
-    else if (node.data.compareTo(data) == 0) {
+    else if (node.data == data) {
       node.data = data;
       return true;
       //if data is less than current node's data go left in tree
-    } else if (node.data.compareTo(data) > 0)
+    } else if (node.data > data)
       return edit(data, node.left);
       //otherwise go right
     else
       return edit(data, node.right);
   }
 
-  public boolean delete(T data) {
+  public boolean delete(int data) {
     Node temp = root;
     Node prev = null;
 
     //loops until temp is null
     while (temp != null) {
       //stops when data is matched
-      if (temp.data.compareTo(data) == 0)
+      if (temp.data == data)
         break;
         //goes left if node data is greater than data to delete
-      else if (temp.data.compareTo(data) > 0) {
+      else if (temp.data > data) {
         prev = temp;
         temp = temp.left;
         //otherwise goes right
@@ -155,43 +177,78 @@ public class BinarySearchTree<T extends Comparable> {
     }
   }
 
-  //recursive function to print tree
-  public void display() {
-    display(root);
+  //recursive function to get minimum value
+  public int getMinimumValue() {
+    return getMinimumValue(root);
   }
 
+  private int getMinimumValue(Node node) {
+    //goes left in tree until it falls off
+    if (node.left != null)
+      getMinimumValue(node.left);
+    return node.data;
+  }
 
-  private void display(Node node) {
+  //recursive function to print tree in ascending  order
+  public void displayAscendingEven() {
+    displayAscendingEven(root);
+  }
+
+  private void displayAscendingEven(Node node) {
     if (node != null) {
-      display(node.left);//prints left branch
-      System.out.println(node.data.toString()); //prints node
-      display(node.right);//prints right branch
+      displayAscendingEven(node.left);//prints left branch
+      if((node.data % 2) == 0) //checks to see if number is even
+        System.out.println(node.data); //prints node
+      displayAscendingEven(node.right);//prints right branch
     }
   }
 
-  //recursive function to write tree to file
-  public void upload(String filePath) {
-    try {
-      Path path = FileSystems.getDefault().getPath(".", filePath);
-      OutputStream in = Files.newOutputStream(path);
-      BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(in));
-      upload(root, writer);
-      writer.flush();
-      writer.close();
-      System.out.println("Upload completed.");
-    } catch (IOException e) {
 
-    }
+  public void displayDescending() {
+    displayDescending(root);
   }
 
-  private void upload(Node node, BufferedWriter writer) throws IOException{
+
+  private void displayDescending(Node node) {
     if (node != null) {
-      upload(node.left, writer); //write left branch
-      writer.write(node.data.toString() + '\n'); // write current node
-      upload(node.right, writer); //write right branch
+      displayDescending(node.right);//prints right branch
+      System.out.println(node.data); //prints node
+      displayDescending(node.left);//prints left branch
     }
   }
 
+  public void displayLeaves() {
+    displayLeaves(root);
+  }
+
+
+  private void displayLeaves(Node node) {
+    if (node != null) {
+      //checks for branches
+      if (node.left != null || node.right != null) {
+        displayLeaves(node.left);//prints left branch
+        displayLeaves(node.right);//prints right branch
+      } else {
+        System.out.println(node.data); //prints node
+      }
+    }
+  }
+
+  //recursive function to get odd numbers in tree
+  public int sumOdd() {
+    return sumOdd(root, 0);
+  }
+
+  private int sumOdd(Node node, int sum) {
+    //if node is null return 0
+    if(node == null)
+      return 0;
+    else {
+      //if node is even make number 0 otherwise use node data
+      int oddNum = (node.data % 2) > 0 ? node.data : 0;
+      return sum + oddNum + sumOdd(node.left, 0) + sumOdd(node.right, 0);
+    }
+  }
 
   //recursive function to get height of tree
   public int height() {
@@ -199,8 +256,8 @@ public class BinarySearchTree<T extends Comparable> {
   }
 
   private int height(Node node) {
-    if(node == null) {
-      return 0;
+    if (node == null) {
+      return 0; //returns 0 if node is null
     } else {
       int leftHeight = height(node.left);
       int rightHeight = height(node.right);

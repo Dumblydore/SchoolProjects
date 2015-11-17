@@ -16,7 +16,15 @@ public class Student implements Comparable<Student> {
   public String lastName;
   public double gpa;
 
-  public Student(int id, int age, String lastName, double gpa) {
+  public Student(int id, int age, String lastName, double gpa) throws BadDataInsertionException {
+    if(id > MAX_ID)
+      throw new BadDataInsertionException("ID number entered is too high!");
+    else if (age > MAX_AGE)
+      throw new BadDataInsertionException("Age entered is too high!");
+    else if (gpa > MAX_GPA)
+      throw new BadDataInsertionException("GPA entered is too high!");
+    else if (gpa < MIN_GPA)
+      throw new BadDataInsertionException("GPA entered is too low!");
     this.id = id;
     this.age = age;
     this.lastName = lastName;
@@ -37,6 +45,7 @@ public class Student implements Comparable<Student> {
         " " + gpa;
   }
 
+  //for downloading database
   public static BinarySearchTree<Student> download(String filePath) {
     BinarySearchTree<Student> tree = new BinarySearchTree<>();
     Path path = FileSystems.getDefault().getPath(".", filePath);
@@ -47,11 +56,15 @@ public class Student implements Comparable<Student> {
       String line = "";
       while ((line = reader.readLine()) != null) {
         String[] data = line.split(" ");
-        tree.add(new Student(
-          Integer.parseInt(data[0]),
-          Integer.parseInt(data[1]),
-          data[2],
-          Double.parseDouble(data[3])));
+        try {
+          tree.add(new Student(
+            Integer.parseInt(data[0]),
+            Integer.parseInt(data[1]),
+            data[2],
+            Double.parseDouble(data[3])));
+        } catch (BadDataInsertionException e) {
+          System.out.println("Bad student data detected, skipping");
+        }
       }
       System.out.println("Download completed.");
     } catch (IOException e) {
@@ -59,5 +72,12 @@ public class Student implements Comparable<Student> {
     }
 
     return tree;
+  }
+
+  //for handling bad data
+  public class BadDataInsertionException extends Exception {
+    public BadDataInsertionException(String message) {
+      super(message);
+    }
   }
 }
