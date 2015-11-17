@@ -61,29 +61,37 @@ public class Main {
     private static boolean validate(Move startPoint, Move endPoint) {
         Stack<Move> moveHistory = new Stack<>();
         moveHistory.push(startPoint);
-        Move currentMove  = moveHistory.pop();
+        System.out.println(moveHistory);
+        Move currentMove = moveHistory.pop();
+        System.out.println(moveHistory);
         while (true) {
             currentMove.isVisited = true;
             if (currentMove.equals(endPoint))
                 return true;
             if (isSpaceAvailable('n', currentMove)) {
                 moveHistory.push(currentMove);
+                System.out.println(moveHistory);
                 currentMove = map[currentMove.y + 1][currentMove.x];
             } else if (isSpaceAvailable('e', currentMove)) {
                 moveHistory.push(currentMove);
+                System.out.println(moveHistory);
                 currentMove = map[currentMove.y][currentMove.x + 1];
             } else if (isSpaceAvailable('s', currentMove)) {
                 moveHistory.push(currentMove);
+                System.out.println(moveHistory);
                 currentMove = map[currentMove.y - 1][currentMove.x];
             } else if (isSpaceAvailable('w', currentMove)) {
                 currentMove.isVisited = true;
                 moveHistory.push(currentMove);
+                System.out.println(moveHistory);
                 currentMove = map[currentMove.x - 1][currentMove.y];
             } else {
                 if (moveHistory.isEmpty())
                     break;
-                else
+                else {
                     currentMove = moveHistory.pop();
+                    System.out.println(moveHistory);
+                }
             }
         }
         return false;

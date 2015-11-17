@@ -74,8 +74,30 @@ public class CirclePanel extends JPanel {
         // Add the button panel to the bottom of the main panel
         this.add(moveButtonPanel, "South");
         this.add(colorButtonPanel, "North");
+        initActions();
     }
 
+
+    private void initActions() {
+        Action leftAction = new KeyAction("Left", left);
+        Action rightAction = new KeyAction("Up", up);
+        Action upAction = new KeyAction("Down", down);
+        Action downAction = new KeyAction("Right", right);
+
+
+        InputMap map = getInputMap(JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
+        map.put(KeyStroke.getKeyStroke("A"), "panel.left");
+        map.put(KeyStroke.getKeyStroke("W"), "panel.up");
+        map.put(KeyStroke.getKeyStroke("S"), "panel.down");
+        map.put(KeyStroke.getKeyStroke("D"), "panel.right");
+
+        ActionMap actionMap = getActionMap();
+        actionMap.put("panel.left", leftAction);
+        actionMap.put("panel.up", rightAction);
+        actionMap.put("panel.down", upAction);
+        actionMap.put("panel.right", downAction);
+
+    }
 
     private void checkBounds() {
         if (x <= 0)
@@ -157,6 +179,18 @@ public class CirclePanel extends JPanel {
         public void actionPerformed(ActionEvent e) {
             c = color;
             repaint();
+        }
+    }
+
+    private class KeyAction extends AbstractAction {
+        public KeyAction(String name, JButton move) {
+            super(name);
+            putValue("move", move);
+        }
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            ((JButton)getValue("move")).doClick();
         }
     }
 }
