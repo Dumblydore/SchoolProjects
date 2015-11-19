@@ -1,0 +1,10 @@
+// Symbol table
+// Scope level 0:
+//	Symbol Name       Page Address
+//	----------------  ------------
+//	SUM               3058
+//	NEG48             3013
+//	CRLF              3057
+//	MESG2             3036
+//	MESG1             3014
+
