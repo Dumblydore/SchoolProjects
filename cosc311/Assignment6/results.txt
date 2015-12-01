@@ -1,0 +1,146 @@
+String Hashcode
+
+Linear probing results
+======file1======
+Node based average runtime:: 0.9631979695431472
+Time based average runtime:: 1.000000000027605ms per node
+Number of words: 3152
+Number of distinct words: 1269
+======file2======
+Node based average runtime:: 0.9466092823077817
+Time based average runtime:: 1.0000000000248446ms per node
+Number of words: 8597
+Number of distinct words: 2029
+======file3======
+Node based average runtime:: 0.9005119348670819
+Time based average runtime:: 1.0000000000448583ms per node
+Number of words: 16213
+Number of distinct words: 3743
+======file4======
+Node based average runtime:: 0.8723899626741565
+Time based average runtime:: 1.0000000000883364ms per node
+Number of words: 27059
+Number of distinct words: 5070
+======file5======
+Node based average runtime:: 0.8671854855723026
+Time based average runtime:: 1.0000000001256033ms per node
+Number of words: 42661
+Number of distinct words: 5978
+
+Hash Function 1
+
+Description
+Chaining Results
+======file1======
+Node based average runtime:: 1.5713832487309645
+Time based average runtime:: 1.0000000000420979ms per node
+Number of words: 3152
+Number of distinct words: 1351
+======file2======
+Node based average runtime:: 1.7366523205769455
+Time based average runtime:: 1.0000000000441682ms per node
+Number of words: 8597
+Number of distinct words: 2264
+======file3======
+Node based average runtime:: 1.712144575340776
+Time based average runtime:: 1.0000000000828153ms per node
+Number of words: 16213
+Number of distinct words: 4667
+======file4======
+Node based average runtime:: 1.7356147677297757
+Time based average runtime:: 1.0000000000572806ms per node
+Number of words: 27059
+Number of distinct words: 7154
+======file5======
+Node based average runtime:: 1.7857996765195379
+Time based average runtime:: 1.0000000000952376ms per node
+Number of words: 42661
+Number of distinct words: 9138
+
+Linear Probing Results
+
+======file1======
+Node based average runtime:: 0.5970812182741116
+Time based average runtime:: 1.0000000001035192ms per node
+Number of words: 3152
+Number of distinct words: 575
+======file2======
+Node based average runtime:: 0.5397231592415959
+Time based average runtime:: 1.0000000002291225ms per node
+Number of words: 8597
+Number of distinct words: 691
+======file3======
+Node based average runtime:: 0.46579905014494544
+Time based average runtime:: 1.0000000005700458ms per node
+Number of words: 16213
+Number of distinct words: 798
+======file4======
+Node based average runtime:: 0.39920174433645
+Time based average runtime:: 1.000000000630777ms per node
+Number of words: 27059
+Number of distinct words: 959
+======file5======
+Node based average runtime:: 0.4435198424790793
+Time based average runtime:: 1.0000000009157999ms per node
+Number of words: 42661
+Number of distinct words: 1190
+
+Hash Function 2
+Description
+
+Chaining Results
+======file1======
+Node based average runtime:: 1.5713832487309645
+Time based average runtime:: 1.0000000000351965ms per node
+Number of words: 3152
+Number of distinct words: 1351
+======file2======
+Node based average runtime:: 1.7366523205769455
+Time based average runtime:: 1.000000000026915ms per node
+Number of words: 8597
+Number of distinct words: 2264
+======file3======
+Node based average runtime:: 1.712144575340776
+Time based average runtime:: 1.0000000000407177ms per node
+Number of words: 16213
+Number of distinct words: 4667
+======file4======
+Node based average runtime:: 1.7356147677297757
+Time based average runtime:: 1.00000000005383ms per node
+Number of words: 27059
+Number of distinct words: 7154
+======file5======
+Node based average runtime:: 1.7857996765195379
+Time based average runtime:: 1.0000000000614213ms per node
+Number of words: 42661
+Number of distinct words: 9138
+
+Hash Function 3
+Description
+
+Chaining Results
+======file1======
+Node based average runtime:: 1.5713832487309645
+Time based average runtime:: 1.0000000000241545ms per node
+Number of words: 3152
+Number of distinct words: 1351
+======file2======
+Node based average runtime:: 1.7366523205769455
+Time based average runtime:: 1.0000000000282951ms per node
+Number of words: 8597
+Number of distinct words: 2264
+======file3======
+Node based average runtime:: 1.712144575340776
+Time based average runtime:: 1.0000000000469287ms per node
+Number of words: 16213
+Number of distinct words: 4667
+======file4======
+Node based average runtime:: 1.7356147677297757
+Time based average runtime:: 1.0000000000351965ms per node
+Number of words: 27059
+Number of distinct words: 7154
+======file5======
+Node based average runtime:: 1.7857996765195379
+Time based average runtime:: 1.0000000001076599ms per node
+Number of words: 42661
+Number of distinct words: 9138

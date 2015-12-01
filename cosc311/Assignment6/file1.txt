@@ -1,0 +1,222 @@
+
+Along the East Coast of the United States, a cohort of periodical cicadas known as 
+Brood X occupies the prime turf from New York City down to Washington, D.C. Brood 
+Xers are the hip, urban cicadas, the inside–the–Beltway cicadas, the media–savvy celebrity cicadas. When they 
+emerge from their underground existence every 17 years, they face predatory flocks of science writers 
+and television crews, hungry for a story. This year was a Brood X year. Back 
+in May and June, all along the Metroliner corridor, the air was abuzz with cicada 
+calls, echoed and amplified by the attentive journalists. Then, in just a few weeks, it 
+was all over. The cicadas paired off, fell silent, laid eggs and died. The press 
+moved on to the next sensation. Perhaps a few straggler cicadas showed up days or 
+weeks late, but no one was there to notice, and their prospects cannot have been 
+bright. I worry that the same fate may befall an article about cicadas appearing weeks 
+after the great emergence, at the very moment when most of us want to hear 
+not another word about red–eyed sap–sucking insects for at least 17 years. I beg my 
+readers' indulgence for one long, last, lonely stridulation as the summer comes to a close. 
+Periodical cicadas are remarkable in many ways, but I want to focus on one of 
+the simplest aspects of their life cycle: the mere fact that these insects can count 
+as high as 17. Some of them count to 13 instead—and it has not escaped 
+notice that both of these numbers are primes. Of course no one believes that a 
+cicada forms a mental representation of the number 17 or 13, much less that it 
+understands the concept of a prime; but evidently it has some reliable mechanism for marking 
+the passage of the years and keeping an accurate tally. That's wonder enough. The physiological 
+details of how cicadas count will have to be worked out by biologists in the 
+lab and the field, but in the meantime computer simulations may help to determine how 
+precise the timekeeping mechanism needs to be. Computer models also offer some hints about which 
+factors in the cicada's ecological circumstances are most important in maintaining its synchronized way of 
+life. On the other hand, the models do nothing to dispel the sense of mystery 
+about these organisms; bugs that count are deeply odd. 
+
+Cicadas spend almost all of their lives underground, as "nymphs" feeding on xylem sucked out of 
+tree roots; they come to the surface only to mate. Most species have a life cycle lasting a few years, 
+but individuals are not synchronized; all age groups are present at all times, and each 
+year a fraction of the population emerges to breed. True periodicity, where an entire population 
+moves through the various stages of life in synchrony, is extremely rare. Of 1,500 cicada 
+species worldwide, only a handful in the genus Magicicada are known to be periodical; all 
+of them live in North America east of the Great Plains. click for full image 
+and caption The taxonomy of the Magicicada group is somewhat controversial and more than a 
+little confusing. If you sort a collection of specimens by appearance or mating call or 
+molecular markers, they fall into three sets; but it turns out that each of these 
+sets includes both 13–year and 17–year forms. Are there six species, or only three? Complicating 
+matters further, John R. Cooley, David C. Marshall and Chris Simon of the University of 
+Connecticut have recently identified a seventh variety that has a 13–year period but shows genetic 
+affinities to a 17–year group. Then there is the division into broods. A brood is 
+a synchronized population, in which all individuals are the same age. Generation after generation, they 
+go through life in lockstep. One might expect that a brood would consist of a 
+single species, but that's generally not the case. Brood X, for example, includes the 17–year 
+forms of all three species. Geographically, adjacent broods tend to have sharp boundaries, with little 
+overlap. Where two broods do share the same real estate, they are chronologically isolated, typically 
+with four years between their emergences. If you are a cicada trying to emerge in 
+synchrony with all your broodmates, there are two problems you need to solve: First you 
+must choose the right year, and then the right day (or night, rather) within that 
+year. The latter task is easier. Cicadas synchronize the night of their emergence by waiting 
+for an external cue: They crawl out of their burrows when the soil warms to 
+a certain temperature, about 64 degrees Fahrenheit. Keeping track of the years is more challenging. 
+First you need an oscillator of some kind—a device that goes tick–tick–tick at a steady 
+pace. The cicada oscillator presumably ticks once per year. Second, you need to tally the 
+successive ticks, like a prisoner scratching marks on the wall of a cell. Finally you 
+have to recognize when the tick count has reached the target value of 13 or 
+17. The cicada oscillator is probably an annual variation in some property of the xylem 
+the insects consume, reflecting a deciduous tree's yearly cycle of growing and shedding leaves. Support 
+for this hypothesis comes from an ingenious experiment conducted by Richard Karban, Carrie A. Black 
+and Steven A. Weinbaum of the University of California, Davis. They reared cicadas on orchard 
+trees that can be forced to go through two foliage cycles in a single year. 
+Most of the cicadas matured after 17 of the artificially induced cycles, regardless of calendar 
+time. 
+
+The cicada's tally mechanism remains unknown. One example of a biological counting device is 
+the telomere, a distinctive segment of DNA found near the tips of chromosomes in eukaryotic 
+cells. Each time a cell divides, a bit of the telomere is snipped off; when 
+there's none left, the cell ceases to replicate. Thus the telomere counts generations and brings 
+the cell line to an end after a predetermined number of divisions. Perhaps the cicada 
+employs some conceptually similar countdown mechanism, although the biochemical details are surely different. There is 
+no reason to suppose that cicadas count strictly by ones. Indeed, the coexistence of 13–year 
+and 17–year periods suggests other possibilities. For example, the two life cycles might be broken 
+down as (3x4)+1=13 and (4x4)+1=17. In other words, there might be a four–year subcycle, which 
+could be repeated either three or four times, followed by a single additional year. An 
+appealing idea is to identify such subcycles with the stages, or instars, in the development 
+of the juvenile cicada. And it's notable that what distinguishes 17–year from 13–year forms is 
+a four–year prolongation of the second instar. Unfortunately for the hypothesis, the rest of the 
+nymphal stages are not uniform, four–year subcycles. Nymphs pass through them at different paces. Only 
+at the end of the cycle do the members of a brood get back in 
+synch. 
+
+The synchronization of cicada emergence is impressive, but not perfect. There are always at 
+least a few clueless unfortunates who turn up a year early or a year late. 
+Four–year accelerations and retardations are also common. Evidently, the year–counting mechanism can go awry. How 
+much error can the system tolerate before synchronization is lost entirely? Several authors have proposed 
+that Magicicada periodicity evolved during the Pleistocene epoch, as a response to the unfavorable and 
+uncertain climate of glacial intervals. Conditions have changed dramatically since the glaciers retreated, and so 
+it seems unlikely that the same selective pressures are still working to maintain synchronization. What 
+does maintain it? Before considering more complicated hypotheses, it seems worthwhile to ask whether periodicity 
+could have survived as a mere vestigial carryover, without any particular adaptive value in the 
+current environment. If the timekeeping device is never reset, how accurately would it have to 
+work to maintain synchronization over the 10,000 years or so since the end of the 
+Pleistocene? The answer depends in part on what kinds of errors can disrupt the counting. 
+The simplest model allows individual cicadas to make independent errors. Each year, each cicada has 
+some small likelihood of either failing to note the passage of the year or interpolating 
+a spurious extra year. Under this model, the error rate needs to be kept below 
+1 in 10,000. The weakness of this model is the assumption that cicadas would make 
+independent errors. If all the cicadas are trying to read the same chemical signal in 
+the tree sap, errors could be strongly correlated. In a bad year with a short 
+growing season, the signal might never reach the threshold of detection for many individuals. A 
+double oscillation is also a possibility, for example if the trees are defoliated by predators 
+and then put out a second growth of leaves. An error model that allows for 
+such correlations works like this: A cicada's probability of correctly recording the passage of a 
+year depends on the strength of the xylem signal, which varies randomly from year to 
+year but is the same for all the cicadas. If the signal is very strong, 
+almost everyone detects it correctly. If the signal is extremely feeble, nearly all miss it. 
+Although this latter event must be counted as a timekeeping error, it does not break 
+synchronization; instead it retards the entire population by a year. What spoils synchronization is an 
+ambiguous signal, one in the gray area where half the cicadas detect it and the 
+other half don't. 
+
+This splits the population into two groups, which will mature and emerge 
+a year apart. Four or five such splittings over 10,000 years would be enough to 
+wipe out synchronization. A drawback of this error model is that it depends on two 
+variables, which are hard to disentangle: the frequency of ambiguous signals in the xylem and 
+the cicada's acuity in reading those signals. If the signal is usually near the extremes 
+of its range, then even with a crude detector, the population will almost always reach 
+a consensus. If ambiguity is common, then the insect's decision mechanism needs to be finely 
+tuned. I have experimented with tree–ring data as a proxy for the distribution of xylem–signal 
+amplitudes, but the results were not much different from those with a random distribution. The 
+cicadas' response to the signals is defined by an S–shaped curve. If the curve is 
+infinitely steep—a step function—then the probability of registering a tick of the clock is exactly 
+0 up to some threshold and exactly 1 above the threshold. As the curve softens, 
+the transitional region where probabilities are close to ½ gets broader. Running the simulation, it 
+turns out that synchronization survives only if the response curve is very steep indeed, with 
+a vanishingly narrow region of ambiguity. For ease of analysis, suppose we are merely trying 
+to synchronize the clocks of two cicadas that each live for 10,000 years. To a 
+first approximation, they remain in phase only if they agree on the interpretation of the 
+signal every year throughout the 10,000–year interval. For a 90–percent chance of such uninterrupted agreement, 
+the probability of agreement each year must be at least 0.99999. Is such accuracy plausible 
+in a biological mechanism? Could periodicity really be a historical relic, without adaptive significance today? 
+Probably not, but the models are too simplistic to support quantitative conclusions. Nevertheless, the idea 
+of timekeeping errors introduced by ambiguities in environmental signals may well have a place in 
+the biology of cicadas. Suppose there is a north–south gradient in signal amplitude; then somewhere 
+along the gradient there must be a zone of ambiguity. 
+
+Forty years ago, Richard D. Alexander and Thomas E. Moore of the University of Michigan, Ann Arbor, 
+pointed out that broods tend to be arranged like shingles from north to south, with each brood emerging 
+one year later than the one above. It's a pattern that might have been generated 
+by successive population–splitting events like those in the model. If periodicity confers some current selective 
+advantage, a widely favored candidate for that benefit is "predator satiation." Cicadas are large, noisy, 
+clumsy and tasty (or so I'm told). All in all, they are a bonanza for 
+birds and other predators. But the emerging adults appear in such enormous numbers—often hundreds per 
+square meter—that the feast is more than the diners can finish. If the same mass 
+of cicadas were spread out in yearly cohorts one–seventeenth as large, predators could gobble them 
+up, year by year. click for full image and caption Predator satiation and timekeeping errors 
+have the potential to interact in interesting ways. By eliminating off–year stragglers, predation tends to 
+sharpen the peak of the emergence, but of course it also diminishes the height of 
+the peak itself. If predation is too light, then error suppression will be ineffective and 
+synchronization will fail. If predation is too severe, the whole population risks extinction. This analysis 
+suggests the possibility of a system stable only within a narrow range of parameters—always a 
+cause of skepticism, since the parameters are unlikely to be so well–behaved in nature. To 
+my surprise, however, a simple model of predator satiation proved to be highly robust. I 
+defined the satiation threshold—the maximum number of cicadas eaten by predators—as a fraction of the 
+total carrying capacity, or in other words the maximum possible cicada population. I found that 
+synchronization was maintained even with a satiation threshold as low as 0.1; at the other 
+end of the scale, predation did not lead to immediate extinction until the threshold was 
+raised above 0.7. Other aspects of the model are not so confidence–inspiring. Having added a 
+death rate via predation, it is necessary to include a birth rate as well, or 
+else the population would inevitably dwindle away. The numerical value assigned to the birth rate 
+is somewhat arbitrary. 
+
+The only guidance comes from field studies showing that successful female cicadas 
+lay a few hundred eggs. Fortunately, the behavior of the model is not overly sensitive 
+to choices of birth rate within the plausible range. A closely related issue is how 
+to impose a limit on cicada numbers when excess births cause the population to exceed 
+the carrying capacity of the environment. In formulating the computer model, I chose to limit 
+total population by reducing the newborn generation as necessary. Hatchlings could survive only if there 
+were vacancies available for them; newborns could never displace older cohorts. This decision was based 
+on an observation by Karban that infant mortality dominates cicada demography; if a cicada survives 
+its first two years, it will likely last to maturity. click for full image and 
+caption Further experiments revealed that the capacity limit and the strategy chosen for enforcing it 
+can have significant effects on the outcome of a simulation. For example, steady attrition in 
+the nymph population, even at a low background rate of mortality, leaves the brood much 
+more vulnerable to extinction. In contrast, allowing intergenerational competition—in which newborns compete with their elders 
+on an equal basis for the available resources—helps stabilize the synchronized, periodical mode of reproduction. 
+As a matter of fact, it is only in models with this form of competition 
+that I have seen synchronization arise spontaneously from an initially random state. The other models 
+described here can stabilize existing periodicity but have a hard time generating it in the 
+first place. The crucial role of a finite carrying capacity in cicada population models was 
+pointed out almost 30 years ago by Frank C. Hoppensteadt and Joseph B. Keller, then 
+of the Courant Institute of Mathematical Sciences at New York University. I had read an 
+account of their computer simulations before attempting my own, but only after some direct experience 
+did I understand the emphasis they put on carrying capacity. The importance of intergenerational competition 
+was stressed by M. G. Bulmer of the University of Oxford at about the same 
+time. A static population near the carrying capacity, low mortality except at the extremes of 
+the age range, reproduction postponed until the last possible moment—these are characteristics of the Magicicada 
+way of life. I can't help noting that the same traits will soon describe the 
+human population. Intergenerational conflict over resources is also conspicuous in human affairs. Perhaps the cycles 
+of baby booms in recent decades are signs of incipient synchronization in human reproductive practices. 
+One factor not addressed by the models I have described so far is feedback from 
+prey to predator species. In an emergence year, birds that feast on cicadas should be 
+able to raise more young than usual; the resulting increase in predator numbers will make 
+life even harder on straggler cicadas the following year, thus sharpening the population peak. Many 
+authors have drawn attention to this linkage, and have offered it as the key to 
+understanding why the Magicicada species chose prime numbers for their life–cycle periods. Because a prime 
+has no divisors other than itself and 1, the cicadas avoid falling into resonance with 
+predators whose abundance fluctuates on some shorter cycle. For example, a hypothetical 12–year cicada would 
+be susceptible to predators with cycle lengths of 2, 3, 4 or 6 years. G. 
+
+F. Webb of Vanderbilt University has constructed computer simulations in which such interactions of prey 
+and predator cycles favor the 13–year and 17–year cicada periods. Eric Goles of the University 
+of Chile and Oliver Schulz and Mario Markus of the Max–Planck Institut für molekulare Physiologie 
+in Dortmund, Germany, have also published on this subject, referring to cicadas as "a biological 
+generator of prime numbers." Whether the cyclic predator species exist remains an open question. And 
+some quite different explanations have also been put forward. For example, Randel Tom Cox of 
+Arkansas State University and C. E. Carlton of Louisiana State University argue that the heart 
+of the matter is not predation but hybridization. Interbreeding between broods that differ in period 
+could disrupt synchronization for both groups. Thus 13–year and 17–year broods are favored because they 
+emerge together only once every 221 years. Much else about the lives of cicadas remains 
+mysterious. In the 1960s Monte Lloyd of the University of Chicago and Henry S. Dybas 
+of the Field Museum of Natural History in Chicago offered a curious meta–theory of cicada 
+evolution. Any theory that seems too plausible, they argued, is automatically suspect. "If there were 
+a broad, easy evolutionary highway towards periodicity, then why would not more species have taken 
+it?" If one day we run out of cicada mysteries to solve, there are still 
+harder problems waiting. Synchronized, periodic breeding is known in plants as well as animals. Daniel 
+H. Janzen of the University of Michigan has written about the bamboo Phyllostachys bambusoides, which 
+apparently maintains synchronized flowering even when seeds are planted continents apart. And the length of 
+the plant's period makes the cicadas seem as ephemeral as mayflies. The bamboo knows how 
+to count not just to 17 but to 120
