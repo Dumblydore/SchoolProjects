@@ -38,7 +38,17 @@ public class Target {
         return centerY + radius/2;
     }
 
+    public int getDeltaX() {
+        centerX += deltaX;
+        return centerX - radius;
+    }
+
+    public int getDeltaY() {
+        centerY += deltaY;
+        return centerY - radius ;
+    }
+
     public boolean contains(int x, int y) {
-        return (x > getMinX() && x < getMaxX()) && (y > getMinY() && y < getMaxY());
+        return (x >= getMinX() && x <= getMaxX()) && (y >= getMinY() && y <= getMaxY());
     }
 }

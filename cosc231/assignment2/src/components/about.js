@@ -15,6 +15,8 @@ var About = React.createClass({
     render: function () {
         return (
             <div className="About">
+                <h1>Part 1</h1>
+                <br/>
                 <h1>Maurice Edwards</h1>
 
                 <p>
@@ -37,6 +39,10 @@ var About = React.createClass({
                     <li>Playing Guitar</li>
                     <li><a href="https://en.wikipedia.org/wiki/Paintball" target="_blank">Paintball</a></li>
                 </ol>
+                <h1>Part 2</h1>
+                <tbody>
+
+                </tbody>
             </div>
         );
     }
