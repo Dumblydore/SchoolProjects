@@ -13,38 +13,37 @@ public class Word {
         return str.hashCode();
     }*/
 
+    /*@Override
+    public int hashCode() {
+        int hash = 0;
+        int key = str.length();
+        for (char aChar : str.toCharArray()) { // iterate through string's characters
+            hash += aChar | key; // adds a bitmask of the character and key to the hash
+        }
+        return hash;
+    }*/
+
+
+    /*@Override
+    public int hashCode() {
+        int hash = 0;
+        int key = str.length();
+        char[] chars = str.toCharArray(); // gets array of characters from string
+        for (char aChar : chars) { // loops through string
+            hash += aChar * key + 27; // adds
+        }
+        return hash;
+    }*/
+
     @Override
     public int hashCode() {
         int hash = 0;
         int key = str.length();
-        char[] chars = str.toCharArray();
-        for (char aChar : chars) {
-            hash += aChar | key;
-        }
-        return hash;
-    }
-
-
-/*    @Override
-    public int hashCode() {
-        int hash = 0;
-        int key = str.length();
-        char[] chars = str.toCharArray();
-        for (char aChar : chars) {
-            hash += aChar * key + 27;
-        }
-        return hash;
-    }*/
-
-  /*  @Override
-    public int hashCode() {
-        int hash = 0;
-        int key = str.length();
-        for (char ch : str.toCharArray()) {
+        for (char ch : str.toCharArray()) { // iterate through string
             hash += ((ch % 2) == 0 ? ch : 0) * key;
         }
         return hash;
-    }*/
+    }
 
     @Override
     public boolean equals(Object o) {

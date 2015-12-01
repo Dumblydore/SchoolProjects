@@ -8,12 +8,12 @@ public class Word {
         this.str = str;
     }
 
-    /*@Override
+    @Override
     public int hashCode() {
         return str.hashCode();
-    }*/
+    }
 
-    @Override
+/*    @Override
     public int hashCode() {
         int hash = 0;
         int key = str.length();
@@ -22,7 +22,7 @@ public class Word {
             hash += aChar | key;
         }
         return hash;
-    }
+    }*/
 
 
 /*    @Override

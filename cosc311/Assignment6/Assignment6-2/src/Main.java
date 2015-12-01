@@ -13,12 +13,11 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter input file: ");
-        String inFile = scanner.next();
-        System.out.print("Enter output file: ");
-        String outFile = scanner.next();
-        readFile(inFile, outFile);
+        for(int i = 1; i < 6; i++) {
+            System.out.println("=======file" + i + "=======");
+            readFile("file" + i + ".txt", "");
+        }
+//        readFile(inFile, outFile);
     }
 
     public static void readFile(String filePath, String outPath) {
@@ -39,9 +38,11 @@ public class Main {
             }
             double averageTimeRuntime = (System.currentTimeMillis() * 1.0) / beginningTime;
             double averageNodeRuntime = (table.getProbes() * 1.0) / wordCount;
-            System.out.println("Node based average runtime:: " + averageNodeRuntime);
-            System.out.println("Time based average runtime:: " + averageTimeRuntime + "ms per node");
-            table.upload(outPath);
+            System.out.println("Probes: " + table.getProbes());
+            System.out.println("Words: " + wordCount);
+            System.out.println("Node based average runtime: " + averageNodeRuntime);
+            System.out.println("Time based average runtime: " + averageTimeRuntime + "ms per node");
+//            table.upload(outPath);
         } catch (IOException e) {
             e.printStackTrace();
         }
