@@ -1,0 +1,17 @@
+// Symbol table
+// Scope level 0:
+//	Symbol Name       Page Address
+//	----------------  ------------
+//	NEG49             303E
+//	DONE              3039
+//	LOOP              3031
+//	COUNTER           300A
+//	MESG1             300D
+//	SaveR2            303D
+//	SaveR1            303C
+//	BITCNT            302E
+//	SKIP              3037
+//	CRLF              302C
+//	ITEM              300C
+//	POS48             300B
+

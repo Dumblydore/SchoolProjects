@@ -31,22 +31,16 @@
           .END
 
 ; Subroutines
-  BITCNT  ST          R1, SaveR1  ; load SaveR1 to R1
-          ST          R2, SaveR2  ; load SaveR2 to R2
-          AND         R0, R0, #0  ; Clear R0
-  LOOP    LDR         R2, R1, #0  ; load char from string
-          AND         R2, R2, #-1 ; check to see if character is nul
-          BRz         DONE        ; if so, return to main
-          LD          R4, NEG49   ; load -49 to R4
-          ADD         R2, R2, R4  ; check if character is 1
-          BRnp        SKIP        ; if true, skip over code
-                ADD R0,R0,#1      ; increment counter if false
-        SKIP
-        ADD R1, R1, #1            ; increment through string
-        BR  LOOP
-  DONE  LD  R2, SaveR2            ; restore R2
-        LD  R1,SaveR1             ; restore R1
-        RET
+  BITCNT
+  LOOP
+    LD R1, COUNTER
+    OUT
+    ADD R0, R0, #1
+    ADD R1, R0, #-16
+    BRz DONE
+    BR LOOP
+
+  DONE RET
 
 ; Subroutine data
 SaveR1  .BLKW  1
