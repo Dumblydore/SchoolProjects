@@ -1,0 +1,13 @@
+// Symbol table
+// Scope level 0:
+//	Symbol Name       Page Address
+//	----------------  ------------
+//	TMP               3094
+//	CRLF              3095
+//	string            3030
+//	MESG2             3020
+//	NEG10             302E
+//	MESG1             300D
+//	DO_TOP            3003
+//	END               302F
+

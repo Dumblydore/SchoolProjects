@@ -1,0 +1,3 @@
+Traps
+executing traps are calling subroutines from their memory address
+OUT -> x0430
