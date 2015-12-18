@@ -1,3 +1,14 @@
 Traps
 executing traps are calling subroutines from their memory address
 OUT -> x0430
+EXECUTE phase of the trap instruction cycle does four things -
+-
+- zx
+
+
+yo react-webpack-alt
+
+
+the cpu uses the usual memory reference instances as I/O insantions
+
+LC-3 uses memory mapped I/O with polling

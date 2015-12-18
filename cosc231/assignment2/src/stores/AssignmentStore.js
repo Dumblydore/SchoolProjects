@@ -1,24 +1,17 @@
-var alt = require('../alt');
-var AssignmentActions = require('../actions/AssignmentActions');
+var createStore = require('CreateStore');
 
-class AssignmentStore {
-    constructor() {
-        this.assignments = [];
-        this.labs = [];
+module.exports = createStore('AssignmentStore', {
+    state: {
+        assignments: [],
+        labs: []
+    },
+    bind: {
+        getAssignments: function(assignments) {
+            this.assignments = assignments;
+        },
 
-        this.bindListeners({
-            handleGetAssignments: AssignmentActions.GET_ASSIGNMENTS,
-            handleGetLabs: AssignmentActions.GET_LABS
-        });
+        getLabs: function(labs) {
+            this.labs = labs;
+        }
     }
-
-    handleGetAssignments(assignments) {
-        this.assignments = assignments;
-    }
-
-    handleGetLabs(labs) {
-        this.labs = labs;
-    }
-}
-
-module.exports = alt.createStore(AssignmentStore, 'AssignmentStore');
+});
